@@ -4,3 +4,45 @@ img {
     object-fit: cover;
     object-position: center;
 }
+
+.slideshow__container {
+    width: 100vw;
+    overflow: hidden;
+
+    .slideshow {
+        position: relative;
+        display: flex;
+
+        &__item {
+            width: auto;
+            height: 70px;
+            // display: flex;
+            margin-right: 50px;
+
+
+
+            .description {
+                display: none;
+            }
+        }
+    }
+}
+
+.partners {
+    width: 6901px;
+
+    img {
+        filter: grayscale(1);
+    }
+
+    .slideshow__item:hover {
+        img {
+            filter: grayscale(0);
+        }
+    }
+}
+
+.clients {
+    width: 16562px;
+
+}
