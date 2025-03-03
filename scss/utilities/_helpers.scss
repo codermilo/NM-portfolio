@@ -58,4 +58,32 @@
 
 .row {
     display: flex;
+    width: 100%;
+    align-items: center;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+// Hide on Small Displays
+
+.mobile-hidden {
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.mobile-visible {
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.link {
+    &:hover {
+        text-decoration: underline;
+    }
 }
