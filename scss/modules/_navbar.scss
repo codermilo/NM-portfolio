@@ -19,7 +19,7 @@
 
     ul {
         margin: 0;
-        padding: 0;
+        padding: 0 15px;
         list-style: none;
         display: flex;
         margin-inline: auto;
@@ -232,11 +232,14 @@
 
     h3 {
         font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
     }
 
     .main-nav__sub-menu {
         position: relative;
         margin-inline: auto;
+        padding: 0 !important;
     }
 
     .sub-menu__inner {
@@ -244,12 +247,12 @@
         width: 100%;
         // position: relative;
         box-sizing: border-box;
-        gap: 1rem;
+        // gap: 1rem;
 
         .column {
             flex: 1 1 0;
             min-width: 0;
-            padding: 10px;
+            padding: 10px 0;
 
             ul {
                 display: flex;
@@ -257,16 +260,17 @@
                 text-transform: uppercase;
                 // width: 350px;
                 width: 100%;
+                padding: 10px 0;
 
                 li {
                     text-align: left !important;
                     position: relative;
-                    margin-bottom: 1.75rem;
-                    font-weight: 500;
+                    margin-bottom: 1.25rem;
+                    font-weight: 400;
                     letter-spacing: .4px;
-                    padding-left: 20px;
+                    padding-right: 10px;
                     text-wrap: wrap;
-                    padding: 0 15px;
+                    // padding: 0 15px;
                     // width: 300px;
                     text-transform: capitalize;
                     font-size: 1.25rem;
