@@ -39,28 +39,35 @@
   display: flex;
   width: 100%;
   align-items: center;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 /* line 67, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
+.expanded {
+  margin: 0 -15px;
+}
+
+/* line 71, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
 .space-between {
   justify-content: space-between;
 }
 
 @media (max-width: 768px) {
-  /* line 73, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
+  /* line 77, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
   .mobile-hidden {
     display: none;
   }
 }
 
 @media (min-width: 768px) {
-  /* line 79, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
+  /* line 83, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
   .mobile-visible {
     display: none;
   }
 }
 
-/* line 86, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
+/* line 90, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
 .link:hover {
   text-decoration: underline;
 }
@@ -375,6 +382,11 @@ input[type="checkbox"], input[type="radio"] {
   .container {
     width: 1200px;
   }
+}
+
+/* line 21, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_container.scss */
+.neg {
+  margin: 0 -15px;
 }
 
 /* line 1, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_sidebar.scss */
@@ -1379,7 +1391,7 @@ img {
 
 /* line 31, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_img.scss */
 .slideshow__container .slideshow__item picture {
-  height: 75px;
+  height: 70px;
 }
 
 /* line 35, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_img.scss */
