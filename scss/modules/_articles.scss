@@ -16,8 +16,10 @@
     }
 
     .articles-list {
+        width: 100%;
+        flex-wrap: wrap;
 
-        @media (min-width: 768px) {
+        @include mq(small) {
             display: flex;
 
             .article-container {
@@ -29,7 +31,7 @@
             }
         }
 
-        @media (min-width: 1261px) {
+        @include mq(large) {
 
             .article-container {
                 flex: 1;
@@ -48,10 +50,10 @@
             position: relative;
             border: 1px solid #ccc;
             margin-bottom: 30px;
-            border-radius: 3px;
+            border-radius: $br--default;
             box-shadow: 0 3px 35px rgba(0, 0, 0, .1);
             color: #666;
-            transition: all .5s ease;
+            transition: all $trns-duration $trans-ease;
             top: 0;
 
             &:hover {
@@ -65,7 +67,7 @@
                 right: 0;
                 background-color: #926fb1;
                 position: absolute;
-                color: #fff;
+                color: $color-white;
                 font-size: .75rem;
                 padding: 0 10px;
                 line-height: 1.438rem;
@@ -85,6 +87,7 @@
                     color: #926fb1;
                     min-height: 54px;
                     margin: 0;
+                    font-weight: 400;
                 }
 
                 p {

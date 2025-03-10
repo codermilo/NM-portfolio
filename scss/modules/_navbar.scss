@@ -1,5 +1,6 @@
 .main-navigation {
     position: relative;
+    display: none;
 
     h4 {
         margin: 0;
@@ -18,11 +19,10 @@
     }
 
     ul {
-        margin: 0;
+        margin: 0 auto;
         padding: 0 15px;
         list-style: none;
         display: flex;
-        margin-inline: auto;
 
         li {
             text-align: center;
@@ -30,12 +30,12 @@
 
             a {
                 text-decoration: none;
-                color: #fff;
+                color: $color-white;
             }
 
             &:hover {
                 span {
-                    color: #fff !important;
+                    color: $color-white !important;
                 }
 
                 .main-nav__sub-menu__container {
@@ -47,8 +47,8 @@
 
     }
 
-    @media (max-width: 990px) {
-        display: none;
+    @include mq(medium) {
+        display: block;
     }
 
     .main-nav__item {
@@ -63,156 +63,24 @@
             left: 0;
             bottom: -35px;
             width: 100%;
-            /* Match parent's width */
             height: 35px;
-            /* Height of the triangle */
-            // background: #007bff;
-            /* Create a downward pointing triangle using clip-path */
             clip-path: polygon(50% 100%, 0 0, 100% 0);
             z-index: 4;
         }
     }
 
-    .software {
-        background-color: transparent;
+    .main-nav__element--software {
 
         span {
-            color: #67809f;
+            color: $blue-grey;
         }
 
         &:hover .main-nav__item {
-            background-color: #67809f;
+            background-color: $blue-grey;
 
             &:before {
-                background-color: #67809f;
+                background-color: $blue-grey;
             }
-        }
-
-        .main-nav__sub-menu__container {
-            background-color: #526781;
-        }
-    }
-
-    .it {
-        background-color: transparent;
-
-        span {
-            color: #4183d7;
-        }
-
-        &:hover .main-nav__item {
-            background-color: #4183d7;
-
-            &:before {
-                background-color: #4183d7;
-            }
-        }
-
-        .main-nav__sub-menu__container {
-            background-color: #286abd;
-        }
-    }
-
-    .digital {
-        background-color: transparent;
-
-        span {
-            color: #2ecc71;
-        }
-
-        &:hover .main-nav__item {
-            background-color: #2ecc71;
-
-            &:before {
-                background-color: #2ecc71;
-            }
-        }
-
-        .main-nav__sub-menu__container {
-            background-color: #25a25a;
-
-        }
-    }
-
-    .telecoms {
-        background-color: transparent;
-
-        span {
-            color: #d64541;
-        }
-
-        &:hover .main-nav__item {
-            background-color: #d64541;
-
-            &:before {
-                background-color: #d64541;
-            }
-        }
-
-        .main-nav__sub-menu__container {
-            background-color: #bc2c28;
-
-        }
-    }
-
-    .web {
-        background-color: transparent;
-
-        span {
-            color: #926fb1;
-        }
-
-        &:hover .main-nav__item {
-            background-color: #926fb1;
-
-            &:before {
-                background-color: #926fb1;
-            }
-        }
-
-        .main-nav__sub-menu__container {
-            background-color: #79539a;
-
-        }
-    }
-
-    .cyber {
-        background-color: transparent;
-
-        span {
-            color: #f62459;
-        }
-
-        &:hover .main-nav__item {
-            background-color: #f62459;
-
-            &:before {
-                background-color: #f62459;
-            }
-        }
-
-        .main-nav__sub-menu__container {
-            background-color: #de093f;
-        }
-    }
-
-    .developer {
-        background-color: transparent;
-
-        span {
-            color: #ce4125;
-        }
-
-        &:hover .main-nav__item {
-            background-color: #ce4125;
-
-            &:before {
-                background-color: #ce4125;
-            }
-        }
-
-        .main-nav__sub-menu__container {
-            background-color: #a3331d;
         }
     }
 }
@@ -222,7 +90,6 @@
 .main-nav__sub-menu__container {
     display: none;
     position: absolute;
-    // height: 200px;
     width: 100%;
     left: 0;
     padding: 1rem;
@@ -245,9 +112,6 @@
     .sub-menu__inner {
         display: flex;
         width: 100%;
-        // position: relative;
-        box-sizing: border-box;
-        // gap: 1rem;
 
         .column {
             flex: 1 1 0;
@@ -258,7 +122,6 @@
                 display: flex;
                 flex-direction: column;
                 text-transform: uppercase;
-                // width: 350px;
                 width: 100%;
                 padding: 10px 0;
 
@@ -270,33 +133,23 @@
                     letter-spacing: .4px;
                     padding-right: 10px;
                     text-wrap: wrap;
-                    // padding: 0 15px;
-                    // width: 300px;
                     text-transform: capitalize;
                     font-size: 1.25rem;
                     display: flex;
                     align-items: center;
                     gap: 0.75rem;
 
-                    // &:before {
-                    //     content: "";
-                    //     position: absolute;
-                    //     top: 50%;
-                    //     left: 5px;
-                    //     height: 10px;
-                    //     width: 10px;
-                    //     transform: translate(-50%, -50%);
-                    //     background-color: #fff;
-                    // }
-
-                    span {
-                        // position: absolute;
-                        // top: 40%;
-                        // left: -15px;
-                        // height: 10px;
-                        // width: 10px;
-                        // transform: translate(-50%, -50%);
+                    [class^="icon"] {
                         font-size: 1.25rem;
+                    }
+
+                    .link-text {
+                        font-size: 1.25rem;
+                    }
+
+                    &:hover .link-text {
+                        text-decoration: underline;
+                        cursor: pointer;
                     }
                 }
             }
