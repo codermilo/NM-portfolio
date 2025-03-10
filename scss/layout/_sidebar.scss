@@ -28,10 +28,10 @@
                 a {
                     display: block;
                     text-decoration: none;
-                    color: #fff;
+                    color: $color-white;
                     font-size: 1.125rem;
                     padding: 19px 0 18px;
-                    border-radius: 3px;
+                    border-radius: $br--default;
                     outline: 1px solid rgba(0, 0, 0, .25);
                     border: 1px solid hsla(0, 0%, 100%, .1);
 
@@ -45,12 +45,12 @@
         .sub-menu--container {
             .sub-menu {
                 margin-top: 30px;
-                border-radius: 3px;
+                border-radius: $br--default;
                 overflow: hidden;
 
                 li {
                     border-top: 1px solid rgba(0, 0, 0, .45);
-                    color: #fff;
+                    color: $color-white;
                     background-color: rgba(0, 0, 0, .25);
                     // padding: 10px;
                     line-height: 1.5rem;

@@ -11,15 +11,7 @@ header {
         align-items: center;
 
         button {
-            padding: 5px 15px;
-            background-color: #333645;
-            border: 1px solid #333645;
             height: 3.5rem;
-
-            &:hover {
-                background-color: #22242e;
-                border-color: #191a22;
-            }
         }
     }
 }
@@ -29,16 +21,22 @@ header {
     max-width: 400px;
     margin-right: auto;
 
-    @media (min-width: 768px) {
+    @include mq(small) {
         max-width: 345px;
     }
 
-    @media (min-width: 991px) {
+    @include mq(medium) {
         max-width: 374px;
     }
+}
 
-    img {
-        height: auto;
+.hamburger-btn {
+    background-color: #333645;
+    border: 1px solid #333645;
+
+    &:hover {
+        background-color: #22242e;
+        border-color: #191a22;
     }
 }
 
@@ -52,7 +50,7 @@ header {
     span {
         width: 100%;
         height: 4px;
-        background-color: #fff;
+        background-color: $color-white;
     }
 }
 
@@ -60,7 +58,7 @@ header {
     a {
         text-decoration: none;
         color: inherit;
-        font-size: x-large;
+        font-size: 2rem;
     }
 
     padding: 0 1.5rem;
@@ -89,7 +87,6 @@ header {
         button {
             position: absolute;
             right: 15px;
-            // right: 0;
             height: 100%;
             border: none;
             width: 40px;
@@ -99,13 +96,12 @@ header {
 }
 
 .tablet-search-bar {
-    // width: 12rem;
     margin-right: 1rem;
 
     form {
         display: flex;
         height: 3.5rem;
-        border-color: #999aa2;
+        border-color: $heading-grey;
 
         input {
             width: 174px;
@@ -126,11 +122,9 @@ header {
         button {
             width: 3.5rem;
             border-radius: 0 3px 3px 0;
-            background-color: #999aa2;
-            //border-color: #999aa2;
+            background-color: $heading-grey;
             border: none;
-            outline: none;
-            color: #fff;
+            color: $color-white;
             font-size: 1.5rem;
 
             &:hover {
@@ -140,17 +134,17 @@ header {
             }
         }
 
-        @media (min-width: 991px) {
+        @include mq(medium) {
             input {
                 display: none;
             }
 
             button {
-                border-radius: 3px;
+                border-radius: $br--default;
             }
         }
 
-        @media (min-width: 1261px) {
+        @include mq(large) {
             input {
                 display: block;
                 width: 240px;
@@ -163,46 +157,32 @@ header {
     }
 }
 
-.support-btn {
-    background-color: #4183d7 !important;
-    border-color: #4183d7 !important;
+.support {
     display: none;
-    color: #fff;
-    gap: 5px;
-    border-radius: 3px;
-    text-transform: uppercase;
     font-size: 1.125rem !important;
+    margin: 0;
 
-    @media (min-width: 990px) {
+    @include mq(medium) {
         display: flex !important;
         align-items: center;
-    }
-
-    &:hover {
-        background-color: #2a6ec6 !important;
-        border-color: #2a6ec6 !important;
-        cursor: pointer;
     }
 }
 
 .contact-btn {
-    background-color: #999aa2 !important;
-    border-color: #999aa2 !important;
+    @extend %btn;
+    background-color: $heading-grey !important;
+    border-color: $heading-grey !important;
     margin: 0 1rem;
     display: none;
-    color: #fff;
-    gap: 5px;
-    border-radius: 3px;
-    text-transform: uppercase;
-    font-size: 1.125rem;
+    font-size: 1.125rem !important;
 
     &:hover {
-        background-color: #7e808a !important;
-        border-color: #7e808a !important;
+        background-color: $heading-grey-hovered !important;
+        border-color: $heading-grey-hovered !important;
         cursor: pointer;
     }
 
-    @media (min-width: 990px) {
+    @include mq(medium) {
         display: flex;
         align-items: center;
     }

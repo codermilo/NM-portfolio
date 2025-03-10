@@ -12,19 +12,18 @@
         gap: 1.25rem;
 
         .dot {
-
             span {
                 display: block;
                 width: 12px;
                 height: 12px;
                 background-color: #ffffff8c;
-                border-radius: 50%;
+                border-radius: $br--round;
             }
         }
 
         .pag--active {
             span {
-                background-color: #fff;
+                background-color: $color-white;
                 position: relative;
 
                 &::after {
@@ -34,7 +33,7 @@
                     left: -7px;
                     width: 22px;
                     height: 22px;
-                    border-radius: 50%;
+                    border-radius: $br--round;
                     border: 2px solid #fff;
                 }
             }
@@ -42,14 +41,12 @@
     }
 
     .banner-item {
-        // background-color: #000;
         min-height: 550px;
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        //text-align: center;
         padding: 0 15px;
         text-align: center;
 
@@ -60,9 +57,9 @@
 
 
 
-        @media (min-width: 768px) {
+        @include mq(medium) {
+            padding: 5rem 0 5rem 0;
             align-items: start;
-            //padding: 0 6rem;
             text-align: left;
 
             h1 {
@@ -83,20 +80,11 @@
             .banner__pagination {
                 margin-inline: auto;
             }
-        }
 
-        @media (min-width: 992px) {
-            .banner-item__img::before {
-                background: linear-gradient(270deg, transparent 25%, #000);
-            }
-        }
-
-        @media (max-width: 991px) {
-
-            padding: 5rem 0 5rem 0;
 
             .banner-item__img::before {
-                background: linear-gradient(270deg, transparent 1%, #000) !important;
+                background: linear-gradient(270deg, transparent 25%, #000) !important;
+                opacity: 1 !important;
             }
 
         }
@@ -107,9 +95,7 @@
             right: 0;
             bottom: 0;
             left: 0;
-            // opacity: .5;
             z-index: -1;
-            // filter: brightness(.55);
 
             &::before {
                 content: "";
@@ -118,7 +104,8 @@
                 right: 0;
                 top: 0;
                 bottom: 0;
-                background: linear-gradient(270deg, transparent 25%, #000);
+                background: #000;
+                opacity: .5;
                 z-index: 3;
             }
         }
@@ -136,12 +123,7 @@
 
         .btn {
             margin-top: 2rem !important;
-
-            &:hover {
-                background-color: #7e57a0;
-                border-color: #7e57a0;
-                cursor: pointer;
-            }
+            margin-bottom: 1.5rem;
         }
     }
 }
