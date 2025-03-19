@@ -2436,11 +2436,11 @@ img {
 
 /* line 85, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_articles.scss */
 #latest-articles .articles-list .article .text-content h3 {
-  font-size: large;
+  font-size: 1rem;
   color: #926fb1;
-  min-height: 54px;
-  margin: 0;
-  font-weight: 400;
+  min-height: 3rem;
+  margin: 0 0 15px;
+  font-weight: 600;
 }
 
 /* line 93, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_articles.scss */
@@ -2448,9 +2448,11 @@ img {
   line-height: 1.375rem;
   font-size: .8125rem;
   flex-grow: 1;
+  margin: 0 0 10px;
+  color: #666;
 }
 
-/* line 100, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_articles.scss */
+/* line 102, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_articles.scss */
 #latest-articles .articles-list .article .btn {
   font-size: medium;
   padding: 10px 20px;
@@ -2460,7 +2462,7 @@ img {
   color: white;
 }
 
-/* line 109, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_articles.scss */
+/* line 111, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_articles.scss */
 #latest-articles .articles-list .article .user {
   display: flex;
   gap: 1rem;
@@ -2468,18 +2470,18 @@ img {
   border-top: 1px solid #91919170;
 }
 
-/* line 116, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_articles.scss */
+/* line 118, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_articles.scss */
 #latest-articles .articles-list .article .user p {
   margin: 0;
   font-size: .85rem;
 }
 
-/* line 121, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_articles.scss */
+/* line 123, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_articles.scss */
 #latest-articles .articles-list .article .user strong {
   color: black;
 }
 
-/* line 125, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_articles.scss */
+/* line 127, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_articles.scss */
 #latest-articles .articles-list .article .user .avatar {
   height: 47px;
   width: auto;
@@ -2487,13 +2489,13 @@ img {
   overflow: hidden;
 }
 
-/* line 135, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_articles.scss */
+/* line 137, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_articles.scss */
 #latest-articles .articles-list .view-all-articles {
   padding-top: 2.5px;
   font-size: 1.5rem;
 }
 
-/* line 139, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_articles.scss */
+/* line 141, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_articles.scss */
 #latest-articles .articles-list .view-all-articles h3 {
   margin: 0;
 }
