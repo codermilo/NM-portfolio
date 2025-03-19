@@ -16,54 +16,56 @@
         <header>
             <div class="inner">
                 <div class="container">
-                    <div class="row expanded">
-                        <div class="header-logo">
-                            <a href="#">
-                                <img src="img/f-logo.webp" alt="Netmatters logo">
-                            </a>
+                    <div class="full-width">
+                        <div class="row expanded">
+                            <div class="header-logo">
+                                <a href="#">
+                                    <img src="img/f-logo.webp" alt="Netmatters logo">
+                                </a>
+                            </div>
+                            <div class="phone-link mobile-visible">
+                                <a href="#">
+                                    <span class="icon-phone_in_talk"></span>
+                                </a>
+                            </div>
+
+                            <button class="btn--it support"><span class="icon-mouse"></span>Support</button>
+
+                            <button class="contact-btn"><span class="icon-paperplane"></span>Contact</button>
+
+                            <!-- Tablet Search Bar -->
+                            <div class="tablet-search-bar mobile-hidden">
+                                <form action="#">
+                                    <input type="text" class="search-bar" placeholder="Search..."
+                                        id="search-input-tablet" name="keyword">
+                                    <button type="submit" id="search-submit-tablet">
+                                        <span class="icon-search"></span>
+                                    </button>
+                                </form>
+                            </div>
+
+                            <div class="">
+                                <button class="btn hamburger-btn">
+                                    <span class="hamburger-container">
+                                        <span> </span>
+                                        <span> </span>
+                                        <span> </span>
+                                    </span>
+                                </button>
+                            </div>
                         </div>
-                        <div class="phone-link mobile-visible">
-                            <a href="#">
-                                <span class="icon-phone_in_talk"></span>
-                            </a>
-                        </div>
 
-                        <button class="btn--it support"><span class="icon-mouse"></span>Support</button>
-
-                        <button class="contact-btn"><span class="icon-paperplane"></span>Contact</button>
-
-                        <!-- Tablet Search Bar -->
-                        <div class="tablet-search-bar mobile-hidden">
+                        <!-- Mobile Search Bar -->
+                        <div class="mobile-search-bar container mobile-visible">
                             <form action="#">
-                                <input type="text" class="search-bar" placeholder="Search..." id="search-input-tablet"
+                                <!-- <label for="search-input" class="hidden">Search...</label> -->
+                                <input type="text" class="search-bar" placeholder="Search..." id="search-input-mobile"
                                     name="keyword">
-                                <button type="submit" id="search-submit-tablet">
+                                <button type="submit" id="search-submit-mobile">
                                     <span class="icon-search"></span>
                                 </button>
                             </form>
                         </div>
-
-                        <div class="">
-                            <button class="btn hamburger-btn">
-                                <span class="hamburger-container">
-                                    <span> </span>
-                                    <span> </span>
-                                    <span> </span>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Mobile Search Bar -->
-                    <div class="mobile-search-bar container mobile-visible">
-                        <form action="#">
-                            <!-- <label for="search-input" class="hidden">Search...</label> -->
-                            <input type="text" class="search-bar" placeholder="Search..." id="search-input-mobile"
-                                name="keyword">
-                            <button type="submit" id="search-submit-mobile">
-                                <span class="icon-search"></span>
-                            </button>
-                        </form>
                     </div>
 
 
@@ -442,7 +444,7 @@
         <!-- Service Section -->
         <div id="services">
             <div class="container">
-                <div class="service-list">
+                <div class="service-list padding">
                     <div class="row space-between">
                         <h2 class="subheading">Our Services</h2>
                         <a href="#">
@@ -861,7 +863,7 @@
         <!-- Welcome Section -->
         <div class="brand-bg welcome">
             <div class="container">
-                <div class="col">
+                <div class="col padding">
                     <h2 class="subheading">Welcome To Netmatters</h2>
                     <p><strong>
                             Netmatters is a leading Bespoke Software, IT Support, and Digital Marketing company based in
@@ -895,7 +897,7 @@
                     </div>
                 </div>
 
-                <div class="col">
+                <div class="col padding">
                     <h2>What Our Clients Think</h2>
                     <div class="client-rating">
                         <span class="icon-star-full"></span>

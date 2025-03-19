@@ -460,40 +460,41 @@
 }
 
 /* line 57, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
-.expanded {
-  margin: 0 -15px;
+.padding {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-/* line 61, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
+/* line 72, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
 .space-between {
   justify-content: space-between;
 }
 
-/* line 67, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
+/* line 78, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
 .mobile-hidden {
   display: none;
 }
 
 @media (min-width: 768px) {
-  /* line 67, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
+  /* line 78, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
   .mobile-hidden {
     display: block;
   }
 }
 
-/* line 74, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
+/* line 86, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
 .mobile-visible {
   display: block;
 }
 
 @media (min-width: 768px) {
-  /* line 74, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
+  /* line 86, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
   .mobile-visible {
     display: none;
   }
 }
 
-/* line 84, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
+/* line 97, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
 .link:hover {
   text-decoration: underline;
   cursor: pointer;
@@ -782,36 +783,34 @@ input[type="checkbox"], input[type="radio"] {
   padding: 0;
 }
 
-/* line 1, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_container.scss */
+/* line 20, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_container.scss */
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 @media (min-width: 768px) {
-  /* line 1, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_container.scss */
+  /* line 20, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_container.scss */
   .container {
     width: 750px;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 1, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_container.scss */
+  /* line 20, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_container.scss */
   .container {
     width: 970px;
   }
 }
 
 @media (min-width: 1261px) {
-  /* line 1, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_container.scss */
+  /* line 20, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_container.scss */
   .container {
     width: 1200px;
   }
 }
 
-/* line 21, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_container.scss */
+/* line 40, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_container.scss */
 .neg {
   margin: 0 -15px;
 }
@@ -1015,13 +1014,7 @@ footer .footer__row {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-}
-
-@media (max-width: 768px) {
-  /* line 7, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
-  footer .footer__row {
-    padding: 0 30px;
-  }
+  padding: 0 15px;
 }
 
 @media (min-width: 1261px) {
@@ -1029,27 +1022,27 @@ footer .footer__row {
   footer .footer__row {
     flex-direction: row;
   }
-  /* line 19, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+  /* line 20, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
   footer .footer__row .footer__company-info {
     width: 400px;
     padding-top: 2rem;
   }
-  /* line 23, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+  /* line 24, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
   footer .footer__row .footer__company-info .footer__logo {
     width: 320px !important;
   }
-  /* line 27, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+  /* line 28, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
   footer .footer__row .footer__company-info .footer-social-logos {
     width: 320px !important;
     position: relative;
   }
-  /* line 33, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+  /* line 34, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
   footer .footer__row .expanded {
     margin: 0;
   }
 }
 
-/* line 39, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+/* line 40, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
 footer .footer__row .footer__company-info .footer-social-logos {
   display: flex;
   flex-wrap: wrap;
@@ -1058,13 +1051,13 @@ footer .footer__row .footer__company-info .footer-social-logos {
 }
 
 @media (min-width: 481px) {
-  /* line 39, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+  /* line 40, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
   footer .footer__row .footer__company-info .footer-social-logos {
     flex-wrap: nowrap;
   }
 }
 
-/* line 49, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+/* line 50, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
 footer .footer__row .footer__company-info .footer-social-logos a {
   padding: 12px 22px 16px;
   margin-right: 10px;
@@ -1079,70 +1072,71 @@ footer .footer__row .footer__company-info .footer-social-logos a {
   text-decoration: none;
 }
 
-/* line 63, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+/* line 64, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
 footer .footer__row .footer__company-info .footer-social-logos .fb:hover {
   background-color: #3b5998;
 }
 
-/* line 67, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+/* line 68, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
 footer .footer__row .footer__company-info .footer-social-logos .li:hover {
   background-color: #0077b5;
 }
 
-/* line 71, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+/* line 72, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
 footer .footer__row .footer__company-info .footer-social-logos .twitter:hover {
   background-color: #00aced;
 }
 
-/* line 75, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+/* line 76, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
 footer .footer__row .footer__company-info .footer-social-logos .insta:hover {
   background-color: #d93175;
 }
 
-/* line 80, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+/* line 81, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
 footer .footer__row .footer__company-info .footer__logo {
   width: 250px;
 }
 
-/* line 83, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+/* line 84, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
 footer .footer__row .footer__company-info .footer__logo img {
   width: 100%;
 }
 
-/* line 91, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+/* line 92, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
 footer .footer__row .footer__menu {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 30px;
+  flex: 1;
 }
 
-/* line 96, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+/* line 98, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
 footer .footer__row .footer__menu .col {
   width: 100%;
 }
 
 @media (min-width: 768px) {
-  /* line 101, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+  /* line 103, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
   footer .footer__row .footer__menu .col {
     width: 50%;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 107, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+  /* line 109, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
   footer .footer__row .footer__menu .col {
     width: 25%;
   }
 }
 
 @media (min-width: 1261px) {
-  /* line 91, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+  /* line 92, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
   footer .footer__row .footer__menu {
     margin-bottom: 40px;
   }
 }
 
-/* line 116, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+/* line 118, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
 footer .footer__row .footer__menu h4 {
   text-transform: uppercase;
   font-size: 1rem;
@@ -1151,26 +1145,26 @@ footer .footer__row .footer__menu h4 {
   font-weight: normal;
 }
 
-/* line 124, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+/* line 126, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
 footer .footer__row .footer__menu ul {
   list-style: none;
   padding: 0;
 }
 
-/* line 129, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+/* line 131, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
 footer .footer__row .footer__menu li {
   letter-spacing: .4px;
   font-size: .8rem;
   line-height: 1.5rem;
 }
 
-/* line 134, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+/* line 136, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
 footer .footer__row .footer__menu li:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 
-/* line 142, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+/* line 144, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
 footer .footer__bottom {
   background-color: #212330;
   padding: 1rem;
@@ -1178,33 +1172,33 @@ footer .footer__bottom {
   line-height: 1.25rem;
 }
 
-/* line 150, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+/* line 152, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
 footer .footer__license--container p {
   margin: 0;
 }
 
 @media (min-width: 768px) {
-  /* line 156, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+  /* line 158, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
   footer .footer__license--container div {
     display: flex;
     align-items: center;
   }
 }
 
-/* line 163, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+/* line 165, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
 footer .footer__license--container span {
   padding: 0 5px;
 }
 
 @media (min-width: 768px) {
-  /* line 168, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+  /* line 170, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
   footer .footer__license--container .license {
     display: flex;
     gap: 5px;
   }
 }
 
-/* line 177, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+/* line 179, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
 .chat-widget {
   position: fixed;
   bottom: 2rem;
@@ -1219,24 +1213,24 @@ footer .footer__license--container span {
   cursor: pointer;
 }
 
-/* line 190, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+/* line 192, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
 .chat-widget svg {
   width: 2rem;
   height: 2rem;
   fill: white;
 }
 
-/* line 195, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+/* line 197, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
 .chat-widget svg rect {
   fill: #333645;
 }
 
-/* line 200, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+/* line 202, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
 .chat-widget:active {
   transform: scale(0.95);
 }
 
-/* line 205, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+/* line 207, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
 .consent-tag {
   position: fixed;
   bottom: 0;
@@ -1250,7 +1244,7 @@ footer .footer__license--container span {
   cursor: pointer;
 }
 
-/* line 217, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+/* line 219, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
 .consent-tag:hover {
   background-color: #999aa2;
   border-color: #999aa2;
@@ -2234,7 +2228,6 @@ img {
     padding: 15px;
     display: flex;
     flex-direction: column;
-    margin: 0 -7.5px;
   }
   /* line 18, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
   .welcome .container h2 {
@@ -2490,15 +2483,17 @@ img {
 #latest-articles .articles-list .article .user .avatar {
   height: 47px;
   width: auto;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
-/* line 133, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_articles.scss */
+/* line 135, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_articles.scss */
 #latest-articles .articles-list .view-all-articles {
   padding-top: 2.5px;
   font-size: 1.5rem;
 }
 
-/* line 137, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_articles.scss */
+/* line 139, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_articles.scss */
 #latest-articles .articles-list .view-all-articles h3 {
   margin: 0;
 }

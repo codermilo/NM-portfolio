@@ -8,9 +8,10 @@ footer {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+        padding: 0 15px;
 
         @include mq(mini) {
-            padding: 0 30px;
+            // padding: 0 30px;
         }
 
         @include mq(large) {
@@ -92,6 +93,7 @@ footer {
             display: flex;
             flex-wrap: wrap;
             margin-bottom: 30px;
+            flex: 1;
 
             .col {
                 width: 100%;

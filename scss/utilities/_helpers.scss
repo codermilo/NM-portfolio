@@ -54,9 +54,20 @@
     padding-left: 15px;
 }
 
-.expanded {
-    margin: 0 -15px;
+.padding {
+    padding-left: 15px;
+    padding-right: 15px;
 }
+
+// .full-width {
+//     display: flex;
+//     width: 100%;
+//     align-items: center;
+// }
+
+// .expanded {
+//     margin: 0 -15px;
+// }
 
 .space-between {
     justify-content: space-between;
@@ -66,6 +77,7 @@
 
 .mobile-hidden {
     display: none;
+
     @include mq(small) {
         display: block;
     }
@@ -73,6 +85,7 @@
 
 .mobile-visible {
     display: block;
+
     @include mq(small) {
         display: none;
     }
