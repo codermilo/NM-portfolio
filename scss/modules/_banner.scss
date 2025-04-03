@@ -3,6 +3,11 @@
     letter-spacing: .4px;
     position: relative;
 
+    .banner-carousel {
+        display: flex;
+        overflow: hidden;
+    }
+
     .banner__pagination {
         position: absolute;
         bottom: 44px;
@@ -42,6 +47,7 @@
 
     .banner-item {
         min-height: 550px;
+        flex: 0 0 100vw;
         position: relative;
         display: flex;
         flex-direction: column;
