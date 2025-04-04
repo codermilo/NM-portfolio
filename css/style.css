@@ -1669,12 +1669,11 @@ img {
 
 /* line 6, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
 #banner .banner-carousel {
-  display: flex;
   overflow: hidden;
 }
 
-/* line 11, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
-#banner .banner__pagination {
+/* line 10, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
+#banner .owl-dots {
   position: absolute;
   bottom: 44px;
   left: 50%;
@@ -1683,29 +1682,29 @@ img {
   gap: 1.25rem;
 }
 
-/* line 20, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
-#banner .banner__pagination .dot span {
+/* line 19, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
+#banner .owl-dots .owl-dot span {
   display: block;
-  width: 12px;
-  height: 12px;
+  width: 11px;
+  height: 11px;
   background-color: #ffffff8c;
   border-radius: 50%;
 }
 
-/* line 30, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
-#banner .banner__pagination .pag--active span {
+/* line 28, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
+#banner .owl-dots .owl-dot.active span {
   background-color: #fff;
   position: relative;
 }
 
-/* line 34, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
-#banner .banner__pagination .pag--active span::after {
+/* line 32, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
+#banner .owl-dots .owl-dot.active span::after {
   content: "";
   position: absolute;
-  top: -7px;
-  left: -7px;
-  width: 22px;
-  height: 22px;
+  top: -6px;
+  left: -6px;
+  width: 19px;
+  height: 19px;
   border-radius: 50%;
   border: 2px solid #fff;
 }
@@ -1802,6 +1801,11 @@ img {
 #banner .banner-item .btn {
   margin-top: 2rem !important;
   margin-bottom: 1.5rem;
+}
+
+/* line 137, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
+.owl-nav button {
+  display: none !important;
 }
 
 @media (min-width: 768px) {
