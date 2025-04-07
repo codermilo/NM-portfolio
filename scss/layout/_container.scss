@@ -21,7 +21,8 @@
 
     &.active {
         transition: all .5s ease;
-        left: -350px;
+        // calculation to turn the sidebar width variable from a positive value to a negative
+        left: calc(var(--sidebar-width) * -1);
 
         &::after {
             background-color: rgba(0, 0, 0, .5);
@@ -50,8 +51,4 @@
 
 .neg {
     margin: 0 -15px;
-}
-
-body {
-    
 }
