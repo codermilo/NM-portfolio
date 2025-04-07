@@ -22,6 +22,7 @@
     &.active {
         transition: all .5s ease;
         left: -350px;
+
         &::after {
             background-color: rgba(0, 0, 0, .5);
         }
@@ -49,4 +50,8 @@
 
 .neg {
     margin: 0 -15px;
+}
+
+body {
+    
 }
