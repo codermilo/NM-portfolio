@@ -235,3 +235,26 @@ header {
         align-items: center;
     }
 }
+
+.nav-hidden {
+    display: none;
+}
+
+#header {
+    
+}
+
+#sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: #fff;
+    display: none;
+    height: fit-content;
+}
+
+.sticky-header-active {
+    display: block !important;
+}

@@ -1746,6 +1746,28 @@ header .row button {
   }
 }
 
+/* line 239, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_nav.scss */
+.nav-hidden {
+  display: none;
+}
+
+/* line 243, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_nav.scss */
+#sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: #fff;
+  display: none;
+  height: fit-content;
+}
+
+/* line 254, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_nav.scss */
+.sticky-header-active {
+  display: block !important;
+}
+
 /* line 1, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_navbar.scss */
 .main-navigation {
   position: relative;

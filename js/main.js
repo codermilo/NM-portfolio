@@ -39,14 +39,28 @@ $('body').on('click', clickEvent);
 
 // Function to track user scroll and reveal sticky header
 let lastKnownScrollPosition = 0;
-document.addEventListener("scroll", (event) => {
-    // If scrollY > 
-    if (window.scrollY > lastKnownScrollPosition) {
-        console.log("User scrolled down");
+const $header = $('header');
+const $stickyHeader = $('#sticky-header');
+console.log('$stickyHeader', $stickyHeader);
+document.addEventListener("scroll", () => {
+    // If scrollY > header height then make header invisible and sticky nav display block
+    if (window.scrollY > $header.outerHeight()) {
+        console.log("User scrolled down past header bottom");
+        $header.addClass('nav-hidden');
+        $stickyHeader.addClass('sticky-header-active');
+
+        // If user scrolls down, the sticky nav stays above the top of the screen
+        if (window.scrollY > lastKnownScrollPosition) {
+            $stickyHeader.addClass('visible');
+        } else {
+            $stickyHeader.removeClass('visible');
+        }
+        // If user scrolls up, the sticky nav slides into view
     } else {
-        console.log("User scrolled up");
+        // Else remove header's hidden class and 
+        console.log("header has scrolled into view");
+        $header.removeClass('nav-hidden');
+        $stickyHeader.removeClass('sticky-header-active');
     }
     lastKnownScrollPosition = window.scrollY;
-    console.log("event", event);
-    console.log("lastKnownScrollPosition", lastKnownScrollPosition);
 })
