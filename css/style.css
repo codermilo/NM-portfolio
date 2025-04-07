@@ -783,34 +783,68 @@ input[type="checkbox"], input[type="radio"] {
   padding: 0;
 }
 
-/* line 20, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_container.scss */
+/* line 1, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_container.scss */
+#main-content {
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: all .5s ease;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+/* line 10, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_container.scss */
+#main-content::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* line 22, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_container.scss */
+#main-content.active {
+  transition: all .5s ease;
+  left: -350px;
+}
+
+/* line 25, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_container.scss */
+#main-content.active::after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* line 32, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_container.scss */
 .container {
   margin-right: auto;
   margin-left: auto;
 }
 
 @media (min-width: 768px) {
-  /* line 20, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_container.scss */
+  /* line 32, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_container.scss */
   .container {
     width: 750px;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 20, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_container.scss */
+  /* line 32, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_container.scss */
   .container {
     width: 970px;
   }
 }
 
 @media (min-width: 1261px) {
-  /* line 20, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_container.scss */
+  /* line 32, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_container.scss */
   .container {
     width: 1200px;
   }
 }
 
-/* line 40, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_container.scss */
+/* line 50, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_container.scss */
 .neg {
   margin: 0 -15px;
 }
@@ -905,6 +939,16 @@ input[type="checkbox"], input[type="radio"] {
 .sidebar .container .second-menu a {
   border: none;
   border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* line 1, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/layout/_sidemenu.scss */
+#side-menu {
+  width: 350px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #333645;
 }
 
 /* line 1, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_buttons.scss */
@@ -1668,7 +1712,12 @@ img {
 }
 
 /* line 6, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
-#banner .banner__pagination {
+#banner .banner-carousel {
+  overflow: hidden;
+}
+
+/* line 10, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
+#banner .owl-dots {
   position: absolute;
   bottom: 44px;
   left: 50%;
@@ -1677,36 +1726,37 @@ img {
   gap: 1.25rem;
 }
 
-/* line 15, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
-#banner .banner__pagination .dot span {
+/* line 19, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
+#banner .owl-dots .owl-dot span {
   display: block;
-  width: 12px;
-  height: 12px;
+  width: 11px;
+  height: 11px;
   background-color: #ffffff8c;
   border-radius: 50%;
 }
 
-/* line 25, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
-#banner .banner__pagination .pag--active span {
+/* line 28, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
+#banner .owl-dots .owl-dot.active span {
   background-color: #fff;
   position: relative;
 }
 
-/* line 29, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
-#banner .banner__pagination .pag--active span::after {
+/* line 32, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
+#banner .owl-dots .owl-dot.active span::after {
   content: "";
   position: absolute;
-  top: -7px;
-  left: -7px;
-  width: 22px;
-  height: 22px;
+  top: -6px;
+  left: -6px;
+  width: 19px;
+  height: 19px;
   border-radius: 50%;
   border: 2px solid #fff;
 }
 
-/* line 43, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
+/* line 48, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
 #banner .banner-item {
   min-height: 550px;
+  flex: 0 0 100vw;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1716,46 +1766,46 @@ img {
   text-align: center;
 }
 
-/* line 53, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
+/* line 59, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
 #banner .banner-item h1 {
   font-size: 2.5rem !important;
   line-height: 3rem !important;
 }
 
 @media (min-width: 992px) {
-  /* line 43, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
+  /* line 48, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
   #banner .banner-item {
     padding: 5rem 0 5rem 0;
     align-items: start;
     text-align: left;
   }
-  /* line 65, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
+  /* line 71, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
   #banner .banner-item h1 {
     font-size: 4rem !important;
     line-height: 5rem !important;
     padding-right: 2rem;
   }
-  /* line 71, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
+  /* line 77, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
   #banner .banner-item h3 {
     font-size: 1.5rem !important;
     line-height: 2.25rem !important;
   }
-  /* line 76, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
+  /* line 82, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
   #banner .banner-item .btn {
     margin: 0 auto 0 0;
   }
-  /* line 80, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
+  /* line 86, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
   #banner .banner-item .banner__pagination {
     margin-inline: auto;
   }
-  /* line 85, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
+  /* line 91, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
   #banner .banner-item .banner-item__img::before {
     background: linear-gradient(270deg, transparent 25%, #000) !important;
     opacity: 1 !important;
   }
 }
 
-/* line 92, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
+/* line 98, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
 #banner .banner-item .banner-item__img {
   position: absolute;
   top: 0;
@@ -1765,7 +1815,7 @@ img {
   z-index: -1;
 }
 
-/* line 100, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
+/* line 106, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
 #banner .banner-item .banner-item__img::before {
   content: "";
   position: absolute;
@@ -1778,23 +1828,28 @@ img {
   z-index: 3;
 }
 
-/* line 113, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
+/* line 119, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
 #banner .banner-item h1 {
   font-size: 2.5rem;
   line-height: 3rem;
   margin: 0 0 1.25rem;
 }
 
-/* line 119, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
+/* line 125, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
 #banner .banner-item h3 {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
-/* line 124, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
+/* line 130, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
 #banner .banner-item .btn {
   margin-top: 2rem !important;
   margin-bottom: 1.5rem;
+}
+
+/* line 137, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_banner.scss */
+.owl-nav button {
+  display: none !important;
 }
 
 @media (min-width: 768px) {
@@ -2229,48 +2284,48 @@ img {
     display: flex;
     flex-direction: column;
   }
-  /* line 18, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
+  /* line 17, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
   .welcome .container h2 {
     padding: 0;
   }
 }
 
-/* line 24, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
+/* line 23, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
 .welcome .subheading {
   padding-top: 3rem;
 }
 
-/* line 28, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
+/* line 27, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
 .welcome h2 {
   font-size: 2.25rem;
   padding: 1rem 0 2rem 0;
   margin: 0;
 }
 
-/* line 34, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
+/* line 33, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
 .welcome p {
   line-height: 1.87rem;
   margin: 0 0 1.25rem 0;
 }
 
-/* line 39, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
+/* line 38, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
 .welcome .client-rating {
   padding-bottom: 1.75rem;
 }
 
-/* line 42, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
+/* line 41, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
 .welcome .client-rating span {
   font-size: 3rem;
   color: orange;
 }
 
-/* line 49, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
+/* line 48, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
 .welcome .client-quote {
   font-size: 1.3rem;
   font-style: italic;
 }
 
-/* line 54, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
+/* line 53, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
 .welcome .client-quote-author {
   color: #a3a8ac;
   font-size: 1rem;
@@ -2278,18 +2333,18 @@ img {
   margin-top: 0.5rem;
 }
 
-/* line 60, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
+/* line 59, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
 .welcome .client-quote-author a {
   color: #fff;
   text-decoration: none;
 }
 
-/* line 63, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
+/* line 62, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
 .welcome .client-quote-author a:hover {
   text-decoration: underline;
 }
 
-/* line 69, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
+/* line 68, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
 .welcome .welcome-links {
   margin-top: auto;
   margin-bottom: 0;
@@ -2300,7 +2355,7 @@ img {
   gap: 1rem;
 }
 
-/* line 78, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
+/* line 77, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
 .welcome .welcome-links a {
   background-color: #272936;
   margin-bottom: 15px;
@@ -2313,23 +2368,23 @@ img {
   line-height: 15px;
 }
 
-/* line 90, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
+/* line 89, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
 .welcome .welcome-links a:hover {
   background-color: #121318;
 }
 
-/* line 95, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
+/* line 94, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
 .welcome .welcome-links a span {
   margin-left: .25rem;
 }
 
-/* line 100, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
+/* line 99, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
 .welcome .welcome-links .google:hover {
   background-color: #166af4 !important;
   border-color: #166af4 !important;
 }
 
-/* line 105, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
+/* line 104, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_welcome.scss */
 .welcome .welcome-links .trustpilot:hover {
   background-color: #009b69 !important;
   border-color: #009b69 !important;

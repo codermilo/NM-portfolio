@@ -3,7 +3,11 @@
     letter-spacing: .4px;
     position: relative;
 
-    .banner__pagination {
+    .banner-carousel {
+        overflow: hidden;
+    }
+
+    .owl-dots {
         position: absolute;
         bottom: 44px;
         left: 50%;
@@ -11,37 +15,39 @@
         display: flex;
         gap: 1.25rem;
 
-        .dot {
+        .owl-dot {
             span {
                 display: block;
-                width: 12px;
-                height: 12px;
+                width: 11px;
+                height: 11px;
                 background-color: #ffffff8c;
                 border-radius: $br--round;
             }
-        }
 
-        .pag--active {
-            span {
-                background-color: $color-white;
-                position: relative;
+            &.active {
+                span {
+                    background-color: $color-white;
+                    position: relative;
 
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: -7px;
-                    left: -7px;
-                    width: 22px;
-                    height: 22px;
-                    border-radius: $br--round;
-                    border: 2px solid #fff;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: -6px;
+                        left: -6px;
+                        width: 19px;
+                        height: 19px;
+                        border-radius: $br--round;
+                        border: 2px solid #fff;
+                    }
                 }
             }
+
         }
     }
 
     .banner-item {
         min-height: 550px;
+        flex: 0 0 100vw;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -126,4 +132,8 @@
             margin-bottom: 1.5rem;
         }
     }
+}
+
+.owl-nav button {
+    display: none !important;
 }
