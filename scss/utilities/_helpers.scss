@@ -99,3 +99,30 @@
         cursor: pointer;
     }
 }
+
+// Sidebar width
+
+* {
+    --sidebar-width: 275px;
+
+    @include mq(medium) {
+        --sidebar-width: 350px;
+    }
+}
+
+// Error with .mobile-hidden/visible !!!
+
+.hidden-sm {
+    display: none;
+    // hidden at smaller screen sizes
+    @media (min-width: 991px) {
+        display: block;
+    }
+}
+
+.visible-sm {
+    // visible at smaller screen sizes
+    @media (min-width: 991px) {
+        display: none;
+    }
+}
