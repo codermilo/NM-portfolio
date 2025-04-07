@@ -1746,6 +1746,16 @@ header .row button {
   }
 }
 
+/* line 239, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_nav.scss */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 9999;
+}
+
 /* line 1, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_navbar.scss */
 .main-navigation {
   position: relative;

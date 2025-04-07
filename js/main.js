@@ -36,6 +36,11 @@ function clickEvent(event) {
 
 $('body').on('click', clickEvent);
 
+// Function to calculate placeholder height
+const $header = $('#header');
+const placeholderHeight = $header;
+console.log("placeholderHeight", placeholderHeight)
+
 
 // Function to track user scroll and reveal sticky header
 let lastKnownScrollPosition = 0;
