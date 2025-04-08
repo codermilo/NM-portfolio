@@ -236,25 +236,37 @@ header {
     }
 }
 
-.nav-hidden {
-    display: none;
-}
-
-#header {
-    
-}
-
 #sticky-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 9999;
-    background-color: #fff;
-    display: none;
     height: fit-content;
+
+    .sticky-header-inner {
+        position: relative;
+        height: 100%;
+    }
+
+    header {
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+    }
 }
 
-.sticky-header-active {
-    display: block !important;
+.show-nav,
+.hide-nav {
+    transition: top 0.25s ease;
+}
+
+.show-nav {
+    top: 0%;
+}
+
+.hide-nav {
+    top: -100%;
 }
