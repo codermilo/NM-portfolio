@@ -235,3 +235,42 @@ header {
         align-items: center;
     }
 }
+
+#sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    height: fit-content;
+
+    .sticky-header-inner {
+        position: relative;
+        height: 100%;
+    }
+
+    header {
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        transition: left 0.5s ease, top 0.25s ease;
+    }
+
+    .side-menu-open {
+        left: calc(var(--sidebar-width) * -1);
+
+        .sticky-header-inner {
+            left: calc(var(--sidebar-width) * -1);
+        }
+    }
+}
+
+.show-nav {
+    top: 0% !important;
+}
+
+.hide-nav {
+    top: -100% !important;
+}
