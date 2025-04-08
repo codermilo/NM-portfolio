@@ -1748,12 +1748,30 @@ header .row button {
 
 /* line 239, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_nav.scss */
 #header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   background-color: #fff;
   z-index: 9999;
+}
+
+/* line 248, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_nav.scss */
+.sticky {
+  position: fixed !important;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+  animation-duration: .25s;
+  transition: all .5s;
+}
+
+/* line 255, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_nav.scss */
+.in-view {
+  top: 0 !important;
+}
+
+/* line 259, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_nav.scss */
+.out-view {
+  top: -100% !important;
 }
 
 /* line 1, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_navbar.scss */

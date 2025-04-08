@@ -38,20 +38,36 @@ $('body').on('click', clickEvent);
 
 // Function to calculate placeholder height
 const $header = $('#header');
-const placeholderHeight = $header;
-console.log("placeholderHeight", placeholderHeight)
+const $placeholder = $('.placeholder');
+const placeholderHeight = $header.height();
+$placeholder.height(placeholderHeight);
 
 
 // Function to track user scroll and reveal sticky header
 let lastKnownScrollPosition = 0;
 document.addEventListener("scroll", (event) => {
-    // If scrollY > 
-    if (window.scrollY > lastKnownScrollPosition) {
-        console.log("User scrolled down");
+    // If scrollY > placeholderHeight then set header to sticky
+    if (window.scrollY > placeholderHeight) {
+        $header.addClass('sticky');
+        // If scrollY > last known scroll position then show sticky header
+        if (window.scrollY > lastKnownScrollPosition) {
+            $header.addClass('out-view');
+            $header.removeClass('in-view');
+        } else {
+            // If scrollY < last known scroll position then hide sticky header
+            $header.removeClass('out-view');
+            $header.addClass('in-view');
+        }
     } else {
-        console.log("User scrolled up");
+        // If scrolled to top then reset header to absolute at the top
+        console.log("at the placeholder height");
+        $header.removeClass('out-view');
+        $header.removeClass('in-view');
+        $header.removeClass('sticky');
     }
+
+
+
+    // update last known scroll position for future checks of scroll direction
     lastKnownScrollPosition = window.scrollY;
-    console.log("event", event);
-    console.log("lastKnownScrollPosition", lastKnownScrollPosition);
 })

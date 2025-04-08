@@ -237,10 +237,25 @@ header {
 }
 
 #header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     background-color: #fff;
     z-index: 9999;
+}
+
+.sticky {
+    position: fixed !important;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, .1);
+    animation-duration: .25s;
+    transition: all .5s;
+}
+
+.in-view {
+    top: 0 !important;
+}
+
+.out-view {
+    top: -100% !important;
 }
