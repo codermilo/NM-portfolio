@@ -255,18 +255,22 @@ header {
         left: 0;
         width: 100%;
         background-color: #fff;
+        transition: left 0.5s ease, top 0.25s ease;
+    }
+
+    .side-menu-open {
+        left: calc(var(--sidebar-width) * -1);
+
+        .sticky-header-inner {
+            left: calc(var(--sidebar-width) * -1);
+        }
     }
 }
 
-.show-nav,
-.hide-nav {
-    transition: top 0.25s ease;
-}
-
 .show-nav {
-    top: 0%;
+    top: 0% !important;
 }
 
 .hide-nav {
-    top: -100%;
+    top: -100% !important;
 }

@@ -26,10 +26,12 @@ function clickEvent(event) {
     if ($target.is($hamburger) && !$hamburger.hasClass('active')) {
         $hamburger.addClass('active');
         $mainContent.addClass('active');
+        $stickyHeaderContainer.addClass('side-menu-open');
     } else
         if (!$sideMenu.has($target).length && $mainContent.hasClass('active') && $hamburger.hasClass('active')) {
             $mainContent.removeClass('active');
             $hamburger.removeClass('active');
+            $stickyHeaderContainer.removeClass('side-menu-open');
         }
 
 }
@@ -43,7 +45,7 @@ const $headerContainer = $('#header');
 const $stickyHeaderContainer = $('#sticky-header');
 const $stickyHeader = $('#sticky-header header');
 // Set the sticky header's height based on the outerHeight of the element so the transition works properly
-const headerHeight = $headerContainer.outerHeight();
+let headerHeight = $headerContainer.outerHeight();
 $stickyHeaderContainer.css('height', headerHeight);
 
 // Declare a debounce timeout
@@ -58,14 +60,16 @@ document.addEventListener("scroll", () => {
     debounceTimeout = setTimeout(() => {
         // If scrollY is below main nav
         if ($(this).scrollTop() > $headerContainer.outerHeight()) {
-            $stickyHeaderContainer.css({'visibility': 'visible', 'display': 'hidden'});
+            $stickyHeaderContainer.css({ 'visibility': 'visible', 'display': 'hidden' });
 
             // If user scrolls down, the sticky nav stays above the top of the screen
             if ($(this).scrollTop() > lastKnownScrollPosition) {
-                $stickyHeader.css({ 'top': '-100%', 'display': 'hidden' });
+                $stickyHeader.removeClass('show-nav');
+                $stickyHeader.addClass('hide-nav');
                 $stickyHeaderContainer.css('pointerEvents', 'none');
             } else {
-                $stickyHeader.css({ 'top': '0%', 'display': 'block' });
+                $stickyHeader.removeClass('hide-nav');
+                $stickyHeader.addClass('show-nav');
                 $stickyHeaderContainer.css('pointerEvents', 'inherit');
             }
         } else {
@@ -73,17 +77,23 @@ document.addEventListener("scroll", () => {
 
             // If user scrolls down, the sticky nav leaves again
             if ($(this).scrollTop() > lastKnownScrollPosition) {
-                $stickyHeader.css({ 'top': '-100%', 'display': 'hidden' });
+                $stickyHeader.removeClass('show-nav');
+                $stickyHeader.addClass('hide-nav');
                 $stickyHeaderContainer.css('pointerEvents', 'none');
             }
 
             // If user has scrolled to the top, hide the sticky header
             if ($(this).scrollTop() == 0) {
-                $stickyHeader.css({ 'top': '-100%', 'display': 'hidden' });
-                $stickyHeaderContainer.css({'pointerEvents': 'none', 'display': 'hidden'});
+                $stickyHeader.removeClass('show-nav hide-nav');
+                $stickyHeaderContainer.css({ 'pointerEvents': 'none', 'visibility': 'hidden' });
             }
         }
         lastKnownScrollPosition = $(this).scrollTop();
     }, 50);
 })
+
+// Small function to recalculate the value of the nav height on window resize
+$(window).resize(() => {
+    headerHeight = $headerContainer.outerHeight();
+});
 

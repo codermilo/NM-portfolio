@@ -1769,22 +1769,27 @@ header .row button {
   left: 0;
   width: 100%;
   background-color: #fff;
+  transition: left 0.5s ease, top 0.25s ease;
 }
 
 /* line 261, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_nav.scss */
-.show-nav,
-.hide-nav {
-  transition: top 0.25s ease;
+#sticky-header .side-menu-open {
+  left: calc(var(--sidebar-width) * -1);
 }
 
-/* line 266, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_nav.scss */
-.show-nav {
-  top: 0%;
+/* line 264, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_nav.scss */
+#sticky-header .side-menu-open .sticky-header-inner {
+  left: calc(var(--sidebar-width) * -1);
 }
 
 /* line 270, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_nav.scss */
+.show-nav {
+  top: 0% !important;
+}
+
+/* line 274, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_nav.scss */
 .hide-nav {
-  top: -100%;
+  top: -100% !important;
 }
 
 /* line 1, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_navbar.scss */
