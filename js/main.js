@@ -98,3 +98,11 @@ $(window).resize(() => {
 });
 
 // Function to create pop up for cookies and then save your choices so you don't get that message again 
+
+// Check if local storage cookies is answered
+
+// If not then show pop up
+
+// If accept button clicked then set consent in storage as true and hide modal
+
+// If change settings then set consent in storage as false
