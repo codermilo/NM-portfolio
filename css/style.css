@@ -1785,11 +1785,13 @@ header .row button {
 /* line 270, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_nav.scss */
 .show-nav {
   top: 0% !important;
+  pointer-events: inherit;
 }
 
-/* line 274, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_nav.scss */
+/* line 275, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_nav.scss */
 .hide-nav {
   top: -100% !important;
+  pointer-events: none;
 }
 
 /* line 1, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_navbar.scss */

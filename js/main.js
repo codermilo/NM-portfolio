@@ -97,3 +97,4 @@ $(window).resize(() => {
     headerHeight = $headerContainer.outerHeight();
 });
 
+// Function to create pop up for cookies and then save your choices so you don't get that message again 

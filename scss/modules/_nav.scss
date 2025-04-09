@@ -269,8 +269,10 @@ header {
 
 .show-nav {
     top: 0% !important;
+    pointer-events: inherit;
 }
 
 .hide-nav {
     top: -100% !important;
+    pointer-events: none;
 }
