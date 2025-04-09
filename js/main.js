@@ -99,10 +99,33 @@ $(window).resize(() => {
 
 // Function to create pop up for cookies and then save your choices so you don't get that message again 
 
-// Check if local storage cookies is answered
+const modal = document.querySelector('.cookie-container');
+const acceptBtn = document.querySelector('.accept-btn');
+const settingsBtn = document.querySelector('.settings-btn');
 
-// If not then show pop up
+// Click function to set values of cookieAnswer and cookieConsent in local storage
+modal.addEventListener("click", (event) => {
+    if (event.target == acceptBtn || event.target == settingsBtn) {
+        if (event.target == acceptBtn) {
+            window.localStorage.setItem('cookieAnswer', true);
+            window.localStorage.setItem('cookieConsent', true);
+        } else if (event.target == settingsBtn) {
+            window.localStorage.setItem('cookieAnswer', true);
+            window.localStorage.setItem('cookieConsent', false);
+        }
+        modal.classList.remove('visible');
+    }
+})
 
-// If accept button clicked then set consent in storage as true and hide modal
 
-// If change settings then set consent in storage as false
+// Check if local storage cookies is answered, if not then show modal
+if (!window.localStorage.cookieAnswer || JSON.parse(window.localStorage.cookieAnswer) != true) {
+    modal.classList.add('visible');
+}
+
+// Event listener for manage consent button click
+const manageWidget = document.querySelector('.consent-tag');
+manageWidget.addEventListener("click", () => {
+    modal.classList.add('visible');
+})
+

@@ -282,6 +282,11 @@ header {
     z-index: 9999;
     font-size: 1rem;
     letter-spacing: .4px;
+    display: none;
+
+    &.visible {
+        display: block;
+    }
 
     h2,
     p {
