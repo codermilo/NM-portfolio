@@ -1464,9 +1464,10 @@ footer .footer__license--container span {
   font-weight: bolder;
   border-radius: 0 10px 0 0;
   cursor: pointer;
+  z-index: 9999;
 }
 
-/* line 220, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
+/* line 221, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/modules/_footer.scss */
 .consent-tag:hover {
   background-color: #999aa2;
   border-color: #999aa2;
