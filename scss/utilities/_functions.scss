@@ -14,7 +14,7 @@
     @return map-get(map-get($palettes, $category), $theme);
 }
 
-// Service functions
+// Service color function
 @each $theme, $color in $ui-colors {
     .service--#{$theme} {
 
@@ -44,6 +44,14 @@
         }
     }
 }
+
+// Sidemenu color function
+@each $theme, $color in $ui-colors {
+    .#{$theme}--icon {
+        color: if($theme ==software, map-get($ui-colors, default), $color);
+    }
+}
+
 
 // Sub-menu color function
 @each $theme, $color in $ui-colors {

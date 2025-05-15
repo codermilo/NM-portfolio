@@ -183,238 +183,278 @@
   color: #ce4125;
 }
 
-/* line 52, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 50, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+.default--icon {
+  color: #67809f;
+}
+
+/* line 50, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+.web--icon {
+  color: #926fb1;
+}
+
+/* line 50, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+.it--icon {
+  color: #4183d7;
+}
+
+/* line 50, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+.digital--icon {
+  color: #2ecc71;
+}
+
+/* line 50, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+.telecoms--icon {
+  color: #d64541;
+}
+
+/* line 50, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+.software--icon {
+  color: #67809f;
+}
+
+/* line 50, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+.security--icon {
+  color: #f62459;
+}
+
+/* line 50, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+.developer--icon {
+  color: #ce4125;
+}
+
+/* line 60, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--default {
   background-color: transparent;
 }
 
-/* line 55, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 63, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--default span {
   color: #67809f;
 }
 
-/* line 59, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 67, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--default:hover .main-nav__item {
   background-color: #67809f;
 }
 
-/* line 62, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 70, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--default:hover .main-nav__item:before {
   background-color: #67809f;
 }
 
-/* line 52, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 60, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--web {
   background-color: transparent;
 }
 
-/* line 55, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 63, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--web span {
   color: #926fb1;
 }
 
-/* line 59, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 67, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--web:hover .main-nav__item {
   background-color: #926fb1;
 }
 
-/* line 62, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 70, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--web:hover .main-nav__item:before {
   background-color: #926fb1;
 }
 
-/* line 67, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 75, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--web .main-nav__sub-menu__container {
   background-color: #79539a;
 }
 
-/* line 52, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 60, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--it {
   background-color: transparent;
 }
 
-/* line 55, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 63, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--it span {
   color: #4183d7;
 }
 
-/* line 59, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 67, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--it:hover .main-nav__item {
   background-color: #4183d7;
 }
 
-/* line 62, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 70, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--it:hover .main-nav__item:before {
   background-color: #4183d7;
 }
 
-/* line 67, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 75, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--it .main-nav__sub-menu__container {
   background-color: #286abd;
 }
 
-/* line 52, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 60, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--digital {
   background-color: transparent;
 }
 
-/* line 55, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 63, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--digital span {
   color: #2ecc71;
 }
 
-/* line 59, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 67, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--digital:hover .main-nav__item {
   background-color: #2ecc71;
 }
 
-/* line 62, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 70, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--digital:hover .main-nav__item:before {
   background-color: #2ecc71;
 }
 
-/* line 67, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 75, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--digital .main-nav__sub-menu__container {
   background-color: #25a25a;
 }
 
-/* line 52, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 60, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--telecoms {
   background-color: transparent;
 }
 
-/* line 55, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 63, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--telecoms span {
   color: #d64541;
 }
 
-/* line 59, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 67, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--telecoms:hover .main-nav__item {
   background-color: #d64541;
 }
 
-/* line 62, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 70, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--telecoms:hover .main-nav__item:before {
   background-color: #d64541;
 }
 
-/* line 67, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 75, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--telecoms .main-nav__sub-menu__container {
   background-color: #bc2c28;
 }
 
-/* line 52, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 60, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--software {
   background-color: transparent;
 }
 
-/* line 55, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 63, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--software span {
   color: #f7b322;
 }
 
-/* line 59, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 67, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--software:hover .main-nav__item {
   background-color: #f7b322;
 }
 
-/* line 62, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 70, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--software:hover .main-nav__item:before {
   background-color: #f7b322;
 }
 
-/* line 67, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 75, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--software .main-nav__sub-menu__container {
   background-color: #526781;
 }
 
-/* line 52, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 60, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--security {
   background-color: transparent;
 }
 
-/* line 55, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 63, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--security span {
   color: #f62459;
 }
 
-/* line 59, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 67, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--security:hover .main-nav__item {
   background-color: #f62459;
 }
 
-/* line 62, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 70, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--security:hover .main-nav__item:before {
   background-color: #f62459;
 }
 
-/* line 67, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 75, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--security .main-nav__sub-menu__container {
   background-color: #de093f;
 }
 
-/* line 52, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 60, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--developer {
   background-color: transparent;
 }
 
-/* line 55, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 63, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--developer span {
   color: #ce4125;
 }
 
-/* line 59, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 67, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--developer:hover .main-nav__item {
   background-color: #ce4125;
 }
 
-/* line 62, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 70, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--developer:hover .main-nav__item:before {
   background-color: #ce4125;
 }
 
-/* line 67, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 75, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .main-nav__element--developer .main-nav__sub-menu__container {
   background-color: #a3331d;
 }
 
-/* line 77, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 85, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .btn--web:hover {
   background-color: #7e57a0;
   border-color: #735093;
 }
 
-/* line 77, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 85, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .btn--it:hover {
   background-color: #2a6ec6;
   border-color: #2665b5;
 }
 
-/* line 77, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 85, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .btn--digital:hover {
   background-color: #26ab5f;
   border-color: #239a55;
 }
 
-/* line 77, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 85, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .btn--telecoms:hover {
   background-color: #c42e2a;
   border-color: #b32a27;
 }
 
-/* line 77, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 85, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .btn--software:hover {
   background-color: #e8a008;
   border-color: #d49308;
 }
 
-/* line 77, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 85, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .btn--security:hover {
   background-color: #e80a42;
   border-color: #d4093c;
 }
 
-/* line 77, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
+/* line 85, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_functions.scss */
 .btn--developer:hover {
   background-color: #ab361f;
   border-color: #9a311c;
@@ -465,67 +505,67 @@
   padding-right: 15px;
 }
 
-/* line 72, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
+/* line 62, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
 .space-between {
   justify-content: space-between;
 }
 
-/* line 78, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
+/* line 68, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
 .mobile-hidden {
   display: none;
 }
 
 @media (min-width: 768px) {
-  /* line 78, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
+  /* line 68, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
   .mobile-hidden {
     display: block;
   }
 }
 
-/* line 86, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
+/* line 76, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
 .mobile-visible {
   display: block;
 }
 
 @media (min-width: 768px) {
-  /* line 86, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
+  /* line 76, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
   .mobile-visible {
     display: none;
   }
 }
 
-/* line 97, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
+/* line 87, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
 .link:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 
-/* line 105, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
+/* line 95, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
 * {
   --sidebar-width: 275px;
 }
 
 @media (min-width: 992px) {
-  /* line 105, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
+  /* line 95, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
   * {
     --sidebar-width: 350px;
   }
 }
 
-/* line 115, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
+/* line 105, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
 .hidden-sm {
   display: none;
 }
 
 @media (min-width: 991px) {
-  /* line 115, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
+  /* line 105, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
   .hidden-sm {
     display: block;
   }
 }
 
 @media (min-width: 991px) {
-  /* line 123, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
+  /* line 113, ../../../coding/projects/NetMatters/HTML Portfolio/NM-portfolio/scss/utilities/_helpers.scss */
   .visible-sm {
     display: none;
   }
