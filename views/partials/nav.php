@@ -1,135 +1,872 @@
-<nav class="bg-gray-800">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex h-16 items-center justify-between">
-            <div class="flex items-center">
-                <div class="shrink-0">
-                    <img class="size-8" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                        <a href="/" class="<?= urlIs('/') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white" aria-current="page">Home</a>
-                        <a href="/about" class="<?= urlIs('/about') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white">About</a>
-                        <?php if ($_SESSION['user'] ?? false) : ?>
-                            <a href="/notes"
-                                class="<?= urlIs('/notes') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Notes</a>
-                        <?php endif ?>
-                        <a href="/contact" class="<?= urlIs('/contact') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white">Contact</a>
+ <div id="header">
+            <header>
+                <div class="inner">
+                    <div class="container">
+                        <div class="full-width">
+                            <div class="row expanded">
+                                <div class="header-logo">
+                                    <a href="#">
+                                        <img src="img/f-logo.webp" alt="Netmatters logo">
+                                    </a>
+                                </div>
+                                <div class="phone-link mobile-visible">
+                                    <a href="#">
+                                        <span class="icon-phone_in_talk"></span>
+                                    </a>
+                                </div>
+
+                                <button class="btn--it support"><span class="icon-mouse"></span>Support</button>
+
+                                <button class="contact-btn"><span class="icon-paperplane"></span>Contact</button>
+
+                                <!-- Tablet Search Bar -->
+                                <div class="tablet-search-bar mobile-hidden">
+                                    <form action="#">
+                                        <input type="text" class="search-bar" placeholder="Search..."
+                                            id="search-input-tablet" name="tablet-search-bar">
+                                        <button type="submit" id="search-submit-tablet">
+                                            <span class="icon-search"></span>
+                                        </button>
+                                    </form>
+                                </div>
+
+                                <div class="">
+                                    <button class="btn hamburger-btn">
+                                        <span class="hamburger-container">
+                                            <span> </span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Mobile Search Bar -->
+                            <div class="row expanded">
+                                <div class="mobile-search-bar container mobile-visible">
+                                    <form action="#">
+                                        <!-- <label for="search-input" class="hidden">Search...</label> -->
+                                        <input type="text" class="search-bar" placeholder="Search..."
+                                            id="search-input-mobile" name="mobile-search-bar">
+                                        <button type="submit" id="search-submit-mobile">
+                                            <span class="icon-search"></span>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
-            </div>
-            <div class="hidden md:block">
-                <div class="ml-4 flex items-center md:ml-6">
-                    <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden">
-                        <span class="absolute -inset-1.5"></span>
-                        <span class="sr-only">View notifications</span>
-                        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
-                        </svg>
-                    </button>
+                <!-- Main Navigation Bar -->
+                <!-- *Hidden at Smaller Device Sizes* -->
 
-                    <!-- Profile dropdown -->
-                    <?php if ($_SESSION['user'] ?? false) : ?>
-                        <div class="relative ml-3">
-                            <button type="button"
-                                class="flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                                id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                                <span class="sr-only">Open user menu</span>
+                <div class="main-navigation brand-bg">
 
-                                <img class="h-8 w-8 rounded-full"
-                                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                                    alt="">
-                            </button>
-                        </div>
+                    <ul class="container">
+                        <li class="main-nav__element--software">
+                            <a href="#">
+                                <div class="main-nav__item">
+                                    <span class="icon-laptop"></span>
+                                    <h4>
+                                        <small>Bespoke</small> <br> Software
+                                    </h4>
+                                </div>
+                            </a>
+                            <div class="main-nav__sub-menu__container">
 
-                        <div class="ml-3">
-                            <form method="POST" action="/session">
-                                <input type="hidden" name="_method" value="DELETE" />
+                                <div class="main-nav__sub-menu container">
+                                    <h3>Our Bespoke Software Services</h3>
+                                    <div class="sub-menu__inner">
+                                        <div class="column">
+                                            <ul>
+                                                <li><span class="icon-cogs"></span><span class="link-text">
+                                                        Bespoke
+                                                        CRM</span>
+                                                </li>
+                                                <li><span class="icon-mobile"></span> <span class="link-text">
+                                                        Mobile App
+                                                        Development</span></li>
+                                                <li><span class="icon-download3"></span> <span class="link-text">
+                                                        Operational
+                                                        Systems</span></li>
+                                                <li><span class="icon-cloud"></span> <span class="link-text">
+                                                        Intranet
+                                                        Development</span></li>
+                                                <li><span class="icon-handshake-o"></span> <span class="link-text">
+                                                        SAP
+                                                        S/4HANA
+                                                        Management</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="column">
+                                            <ul>
+                                                <li><span class="icon-briefcase"></span> <span
+                                                        class="link-text">Business
+                                                        Automation</span></li>
+                                                <li><span class="icon-folder-open"></span> <span
+                                                        class="link-text">Bespoke
+                                                        Databases</span></li>
+                                                <li><span class="icon-users"></span> <span class="link-text">Business
+                                                        Central
+                                                        Implementation</span></li>
+                                                <li><span class="icon-cloud-download"></span> <span
+                                                        class="link-text">Customer
+                                                        Portal Development</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="column">
+                                            <ul>
+                                                <li><span class="icon-shuffle"></span> <span class="link-text">Software
+                                                        Integrations</span></li>
+                                                <li><span class="icon-transfer"></span> <span
+                                                        class="link-text">Sharepoint
+                                                        Development</span></li>
+                                                <li><span class="icon-laptop"></span> <span class="link-text">Internet
+                                                        of
+                                                        Things
+                                                        (IoT) Software</span></li>
+                                                <li><span class="icon-globe"></span> <span class="link-text">Reporting
+                                                        Hub</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-nav__element--it">
+                            <a href="#">
+                                <div class="main-nav__item">
+                                    <span class="icon-display"></span>
+                                    <h4>
+                                        <small>IT</small> <br> Support
+                                    </h4>
+                                </div>
+                            </a>
+                            <div class="main-nav__sub-menu__container">
 
-                                <button class="text-white">Log Out</button>
-                            </form>
-                        </div>
-                    <?php else : ?>
-                        <div class="ml-3">
-                            <a href="/register"
-                                class="<?= urlIs('/register') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Register</a>
-                            <a href="/login"
-                                class="<?= urlIs('/login') ? 'bg-gray-900 text-white' : 'text-gray-300' ?> hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Log
-                                In</a>
-                        </div>
-                    <?php endif ?>
+                                <div class="main-nav__sub-menu container">
+                                    <h3>Our IT Support Services</h3>
+                                    <div class="sub-menu__inner">
+                                        <div class="column">
+                                            <ul>
+                                                <li><span class="icon-headphones"></span><span class="link-text">Managed
+                                                        IT
+                                                        Support</span></li>
+                                                <li><span class="icon-school"></span><span class="link-text">IT
+                                                        Consultancy</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="column">
+                                            <ul>
+                                                <li><span class="icon-briefcase"></span><span class="link-text">Business
+                                                        IT
+                                                        Support</span></li>
+                                                <li><span class="icon-cloud"></span><span class="link-text">Cloud
+                                                        Service
+                                                        Provider</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="column">
+                                            <ul>
+                                                <li><span class="icon-laptop"></span><span class="link-text">Office
+                                                        365 For
+                                                        Business</span></li>
+                                                <li><span class="icon-hard-drive"></span><span class="link-text">Data
+                                                        Backup
+                                                        &
+                                                        Disaster Recovery</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-nav__element--digital">
+                            <a href="#">
+                                <div class="main-nav__item">
+                                    <span class="icon-bar-graph"></span>
+                                    <h4>
+                                        <small>Digital</small> <br>Marketing
+                                    </h4>
+                                </div>
+                            </a>
+                            <div class="main-nav__sub-menu__container">
 
-                    <!--
-                Dropdown menu, show/hide based on menu state.
+                                <div class="main-nav__sub-menu container">
+                                    <h3>Our Digital Marketing Services</h3>
+                                    <div class="sub-menu__inner">
+                                        <div class="column">
+                                            <ul>
+                                                <li><span class="icon-search"></span><span class="link-text">Search
+                                                        Engine
+                                                        Optimisation (SEO)</span></li>
+                                                <li><span class="icon-envelope-o"></span><span class="link-text">Email
+                                                        Marketing</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="column">
+                                            <ul>
+                                                <li><span class="icon-dollar"></span><span class="link-text">Pay
+                                                        Per Click
+                                                        Advertising (PPC)</span></li>
+                                                <li><span class="icon-users"></span><span class="link-text">Social
+                                                        Media
+                                                        Marketing</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="column">
+                                            <ul>
+                                                <li><span class="icon-trending-up"></span><span
+                                                        class="link-text">Conversion
+                                                        Rate Optimisation (CRO)</span>
+                                                </li>
+                                                <li><span class="icon-pencil"></span><span class="link-text">Content
+                                                        Marketing</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-nav__element--telecoms">
+                            <a href="#">
+                                <div class="main-nav__item ">
+                                    <span class="icon-phone_in_talk"></span>
+                                    <h4>
+                                        <small>Telecoms</small> <br>Services
+                                    </h4>
+                                </div>
+                            </a>
+                            <div class="main-nav__sub-menu__container">
 
-                Entering: "transition ease-out duration-100"
-                  From: "transform opacity-0 scale-95"
-                  To: "transform opacity-100 scale-100"
-                Leaving: "transition ease-in duration-75"
-                  From: "transform opacity-100 scale-100"
-                  To: "transform opacity-0 scale-95"
-              -->
-                    <!-- <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 focus:outline-hidden" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                                <div class="main-nav__sub-menu container">
+                                    <h3>Our Telecoms Services</h3>
+                                    <div class="sub-menu__inner">
+                                        <div class="column">
+                                            <ul>
+                                                <li><span class="icon-ticket"></span><span class="link-text">Business
+                                                        Mobile</span></li>
+                                                <li><span class="icon-speed"></span><span class="link-text">Business
+                                                        Broadband</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="column">
+                                            <ul>
+                                                <li><span class="icon-phone"></span><span class="link-text">Hosted
+                                                        VoIP
+                                                        Provider</span></li>
+                                                <li><span class="icon-handshake-o"></span><span class="link-text">Leased
+                                                        Lines
+                                                        Provider</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="column">
+                                            <ul>
+                                                <li><span class="icon-phone-square"></span><span
+                                                        class="link-text">Business
+                                                        VoIP
+                                                        Systems</span></li>
+                                                <li><span class="icon-phone_in_talk"></span><span class="link-text">3CX
+                                                        Systems</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-nav__element--web">
+                            <a href="#">
+                                <div class="main-nav__item">
+                                    <span class="icon-embed2"></span>
+                                    <h4>
+                                        <small>Web</small> <br>Design
+                                    </h4>
+                                </div>
+                            </a>
+                            <div class="main-nav__sub-menu__container">
 
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
+                                <div class="main-nav__sub-menu container">
+                                    <h3>Our Web Design Services</h3>
+                                    <div class="sub-menu__inner">
+                                        <div class="column">
+                                            <ul>
+                                                <li><span class="icon-pencil"></span><span class="link-text">Bespoke
+                                                        Website
+                                                        Design</span></li>
+                                                <li><span class="icon-bullhorn"></span><span class="link-text">Branding
+                                                        &
+                                                        Design</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="column">
+                                            <ul>
+                                                <li><span class="icon-cart"></span><span class="link-text">eCommerce
+                                                        Website
+                                                        Design</span></li>
+                                                <li><span class="icon-mobile"></span><span class="link-text">Mobile
+                                                        App
+                                                        Development</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="column">
+                                            <ul>
+                                                <li><span class="icon-display"></span><span class="link-text">Pay
+                                                        Monthly
+                                                        Websites</span></li>
+                                                <li><span class="icon-cloud"></span><span class="link-text">Web
+                                                        Hosting</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-nav__element--security">
+                            <a href="#">
+                                <div class="main-nav__item">
+                                    <span class="icon-security"></span>
+                                    <h4>
+                                        <small>Cyber</small> <br>Security
+                                    </h4>
+                                </div>
+                            </a>
+                            <div class="main-nav__sub-menu__container">
 
-                        </div> -->
-                    <!-- Active: "bg-gray-100 outline-hidden", Not Active: "" -->
+                                <div class="main-nav__sub-menu container">
+                                    <h3>Our Cyber Security Services</h3>
+                                    <div class="sub-menu__inner">
+                                        <div class="column">
+                                            <ul>
+                                                <li><span class="icon-clipboard"></span><span class="link-text">Cyber
+                                                        Security
+                                                        Assessment</span></li>
+                                                <li><span class="icon-school"></span><span class="link-text">Cyber
+                                                        Essentials
+                                                        Certification</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="column">
+                                            <ul>
+                                                <li><span class="icon-clock-o"></span><span class="link-text">Cyber
+                                                        Security
+                                                        Management</span></li>
+                                                <li><span class="icon-security"></span><span class="link-text">PCI
+                                                        Compliance</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="column">
+                                            <ul>
+                                                <li><span class="icon-lab"></span><span class="link-text">Cyber
+                                                        Penetration
+                                                        Testing</span></li>
+                                                <li><span class="icon-lock"></span><span class="link-text">Hacking
+                                                        Prevention</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-nav__element--developer">
+                            <a href="#">
+                                <div class="main-nav__item">
+                                    <span class="icon-school"></span>
+                                    <h4>
+                                        <small>Developer</small> <br>Course
+                                    </h4>
+                                </div>
+                            </a>
+                            <div class="main-nav__sub-menu__container">
+
+                                <div class="main-nav__sub-menu container">
+                                    <h3>Our Developer Course Services</h3>
+                                    <div class="sub-menu__inner">
+                                        <div class="column">
+                                            <ul>
+                                                <li><span class="icon-display"></span><span class="link-text">Train
+                                                        For A
+                                                        Career
+                                                        In Tech</span></li>
+                                                <li><span class="icon-handshake-o"></span><span class="link-text">Scion
+                                                        Collaborators</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="column">
+                                            <ul>
+                                                <li><span class="icon-embed2"></span><span class="link-text">Skills
+                                                        Bootcamp</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="column">
+                                            <ul>
+                                                <li><span class="icon-help"></span><span class="link-text">Scion
+                                                        Scheme
+                                                        Frequently Asked Questions</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
 
                 </div>
-            </div>
-            <div class="-mr-2 flex md:hidden">
-                <!-- Mobile menu button -->
-                <button type="button" class="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden" aria-controls="mobile-menu" aria-expanded="false">
-                    <span class="absolute -inset-0.5"></span>
-                    <span class="sr-only">Open main menu</span>
-                    <!-- Menu open: "hidden", Menu closed: "block" -->
-                    <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
-                    <!-- Menu open: "block", Menu closed: "hidden" -->
-                    <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
+            </header>
         </div>
-    </div>
 
-    <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="md:hidden" id="mobile-menu">
-        <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
-            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Dashboard</a>
-            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
-            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
-            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
-            <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Reports</a>
-        </div>
-        <div class="border-t border-gray-700 pt-4 pb-3">
-            <div class="flex items-center px-5">
-                <div class="shrink-0">
-                    <img class="size-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+        <main class="">
+
+            <!-- Sticky Navbar -->
+            <div id="sticky-header">
+                <div class="sticky-header-inner">
+                    <header>
+                        <div class="inner">
+                            <div class="container">
+                                <div class="full-width">
+                                    <div class="row expanded">
+                                        <div class="header-logo">
+                                            <a href="#">
+                                                <img src="img/f-logo.webp" alt="Netmatters logo">
+                                            </a>
+                                        </div>
+                                        <div class="phone-link mobile-visible">
+                                            <a href="#">
+                                                <span class="icon-phone_in_talk"></span>
+                                            </a>
+                                        </div>
+
+                                        <button class="btn--it support"><span class="icon-mouse"></span>Support</button>
+
+                                        <button class="contact-btn"><span
+                                                class="icon-paperplane"></span>Contact</button>
+
+                                        <!-- Tablet Search Bar -->
+                                        <div class="tablet-search-bar mobile-hidden">
+                                            <form action="#">
+                                                <input type="text" class="search-bar" placeholder="Search..."
+                                                    id="search-input-tablet-sticky" name="tablet-search-bar-sticky">
+                                                <button type="submit" id="search-submit-tablet-sticky">
+                                                    <span class="icon-search"></span>
+                                                </button>
+                                            </form>
+                                        </div>
+
+                                        <div class="">
+                                            <button class="btn hamburger-btn">
+                                                <span class="hamburger-container">
+                                                    <span> </span>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Mobile Search Bar -->
+                                    <div class="row expanded">
+                                        <div class="mobile-search-bar container mobile-visible">
+                                            <form action="#">
+                                                <!-- <label for="search-input" class="hidden">Search...</label> -->
+                                                <input type="text" class="search-bar" placeholder="Search..."
+                                                    id="search-input-mobile-sticky" name="mobile-search-bar-sticky">
+                                                <button type="submit" id="search-submit-mobile-sticky">
+                                                    <span class="icon-search"></span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!-- Main Navigation Bar -->
+                        <!-- *Hidden at Smaller Device Sizes* -->
+
+                        <div class="main-navigation brand-bg">
+
+                            <ul class="container">
+                                <li class="main-nav__element--software">
+                                    <a href="#">
+                                        <div class="main-nav__item">
+                                            <span class="icon-laptop"></span>
+                                            <h4>
+                                                <small>Bespoke</small> <br> Software
+                                            </h4>
+                                        </div>
+                                    </a>
+                                    <div class="main-nav__sub-menu__container">
+
+                                        <div class="main-nav__sub-menu container">
+                                            <h3>Our Bespoke Software Services</h3>
+                                            <div class="sub-menu__inner">
+                                                <div class="column">
+                                                    <ul>
+                                                        <li><span class="icon-cogs"></span><span class="link-text">
+                                                                Bespoke
+                                                                CRM</span>
+                                                        </li>
+                                                        <li><span class="icon-mobile"></span> <span class="link-text">
+                                                                Mobile App
+                                                                Development</span></li>
+                                                        <li><span class="icon-download3"></span> <span
+                                                                class="link-text">
+                                                                Operational
+                                                                Systems</span></li>
+                                                        <li><span class="icon-cloud"></span> <span class="link-text">
+                                                                Intranet
+                                                                Development</span></li>
+                                                        <li><span class="icon-handshake-o"></span> <span
+                                                                class="link-text">
+                                                                SAP
+                                                                S/4HANA
+                                                                Management</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="column">
+                                                    <ul>
+                                                        <li><span class="icon-briefcase"></span> <span
+                                                                class="link-text">Business
+                                                                Automation</span></li>
+                                                        <li><span class="icon-folder-open"></span> <span
+                                                                class="link-text">Bespoke
+                                                                Databases</span></li>
+                                                        <li><span class="icon-users"></span> <span
+                                                                class="link-text">Business
+                                                                Central
+                                                                Implementation</span></li>
+                                                        <li><span class="icon-cloud-download"></span> <span
+                                                                class="link-text">Customer
+                                                                Portal Development</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="column">
+                                                    <ul>
+                                                        <li><span class="icon-shuffle"></span> <span
+                                                                class="link-text">Software
+                                                                Integrations</span></li>
+                                                        <li><span class="icon-transfer"></span> <span
+                                                                class="link-text">Sharepoint
+                                                                Development</span></li>
+                                                        <li><span class="icon-laptop"></span> <span
+                                                                class="link-text">Internet
+                                                                of
+                                                                Things
+                                                                (IoT) Software</span></li>
+                                                        <li><span class="icon-globe"></span> <span
+                                                                class="link-text">Reporting
+                                                                Hub</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="main-nav__element--it">
+                                    <a href="#">
+                                        <div class="main-nav__item">
+                                            <span class="icon-display"></span>
+                                            <h4>
+                                                <small>IT</small> <br> Support
+                                            </h4>
+                                        </div>
+                                    </a>
+                                    <div class="main-nav__sub-menu__container">
+
+                                        <div class="main-nav__sub-menu container">
+                                            <h3>Our IT Support Services</h3>
+                                            <div class="sub-menu__inner">
+                                                <div class="column">
+                                                    <ul>
+                                                        <li><span class="icon-headphones"></span><span
+                                                                class="link-text">Managed
+                                                                IT
+                                                                Support</span></li>
+                                                        <li><span class="icon-school"></span><span class="link-text">IT
+                                                                Consultancy</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="column">
+                                                    <ul>
+                                                        <li><span class="icon-briefcase"></span><span
+                                                                class="link-text">Business
+                                                                IT
+                                                                Support</span></li>
+                                                        <li><span class="icon-cloud"></span><span
+                                                                class="link-text">Cloud
+                                                                Service
+                                                                Provider</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="column">
+                                                    <ul>
+                                                        <li><span class="icon-laptop"></span><span
+                                                                class="link-text">Office
+                                                                365 For
+                                                                Business</span></li>
+                                                        <li><span class="icon-hard-drive"></span><span
+                                                                class="link-text">Data
+                                                                Backup
+                                                                &
+                                                                Disaster Recovery</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="main-nav__element--digital">
+                                    <a href="#">
+                                        <div class="main-nav__item">
+                                            <span class="icon-bar-graph"></span>
+                                            <h4>
+                                                <small>Digital</small> <br>Marketing
+                                            </h4>
+                                        </div>
+                                    </a>
+                                    <div class="main-nav__sub-menu__container">
+
+                                        <div class="main-nav__sub-menu container">
+                                            <h3>Our Digital Marketing Services</h3>
+                                            <div class="sub-menu__inner">
+                                                <div class="column">
+                                                    <ul>
+                                                        <li><span class="icon-search"></span><span
+                                                                class="link-text">Search
+                                                                Engine
+                                                                Optimisation (SEO)</span></li>
+                                                        <li><span class="icon-envelope-o"></span><span
+                                                                class="link-text">Email
+                                                                Marketing</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="column">
+                                                    <ul>
+                                                        <li><span class="icon-dollar"></span><span class="link-text">Pay
+                                                                Per Click
+                                                                Advertising (PPC)</span></li>
+                                                        <li><span class="icon-users"></span><span
+                                                                class="link-text">Social
+                                                                Media
+                                                                Marketing</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="column">
+                                                    <ul>
+                                                        <li><span class="icon-trending-up"></span><span
+                                                                class="link-text">Conversion
+                                                                Rate Optimisation (CRO)</span>
+                                                        </li>
+                                                        <li><span class="icon-pencil"></span><span
+                                                                class="link-text">Content
+                                                                Marketing</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="main-nav__element--telecoms">
+                                    <a href="#">
+                                        <div class="main-nav__item ">
+                                            <span class="icon-phone_in_talk"></span>
+                                            <h4>
+                                                <small>Telecoms</small> <br>Services
+                                            </h4>
+                                        </div>
+                                    </a>
+                                    <div class="main-nav__sub-menu__container">
+
+                                        <div class="main-nav__sub-menu container">
+                                            <h3>Our Telecoms Services</h3>
+                                            <div class="sub-menu__inner">
+                                                <div class="column">
+                                                    <ul>
+                                                        <li><span class="icon-ticket"></span><span
+                                                                class="link-text">Business
+                                                                Mobile</span></li>
+                                                        <li><span class="icon-speed"></span><span
+                                                                class="link-text">Business
+                                                                Broadband</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="column">
+                                                    <ul>
+                                                        <li><span class="icon-phone"></span><span
+                                                                class="link-text">Hosted
+                                                                VoIP
+                                                                Provider</span></li>
+                                                        <li><span class="icon-handshake-o"></span><span
+                                                                class="link-text">Leased
+                                                                Lines
+                                                                Provider</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="column">
+                                                    <ul>
+                                                        <li><span class="icon-phone-square"></span><span
+                                                                class="link-text">Business
+                                                                VoIP
+                                                                Systems</span></li>
+                                                        <li><span class="icon-phone_in_talk"></span><span
+                                                                class="link-text">3CX
+                                                                Systems</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="main-nav__element--web">
+                                    <a href="#">
+                                        <div class="main-nav__item">
+                                            <span class="icon-embed2"></span>
+                                            <h4>
+                                                <small>Web</small> <br>Design
+                                            </h4>
+                                        </div>
+                                    </a>
+                                    <div class="main-nav__sub-menu__container">
+
+                                        <div class="main-nav__sub-menu container">
+                                            <h3>Our Web Design Services</h3>
+                                            <div class="sub-menu__inner">
+                                                <div class="column">
+                                                    <ul>
+                                                        <li><span class="icon-pencil"></span><span
+                                                                class="link-text">Bespoke
+                                                                Website
+                                                                Design</span></li>
+                                                        <li><span class="icon-bullhorn"></span><span
+                                                                class="link-text">Branding
+                                                                &
+                                                                Design</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="column">
+                                                    <ul>
+                                                        <li><span class="icon-cart"></span><span
+                                                                class="link-text">eCommerce
+                                                                Website
+                                                                Design</span></li>
+                                                        <li><span class="icon-mobile"></span><span
+                                                                class="link-text">Mobile
+                                                                App
+                                                                Development</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="column">
+                                                    <ul>
+                                                        <li><span class="icon-display"></span><span
+                                                                class="link-text">Pay
+                                                                Monthly
+                                                                Websites</span></li>
+                                                        <li><span class="icon-cloud"></span><span class="link-text">Web
+                                                                Hosting</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="main-nav__element--security">
+                                    <a href="#">
+                                        <div class="main-nav__item">
+                                            <span class="icon-security"></span>
+                                            <h4>
+                                                <small>Cyber</small> <br>Security
+                                            </h4>
+                                        </div>
+                                    </a>
+                                    <div class="main-nav__sub-menu__container">
+
+                                        <div class="main-nav__sub-menu container">
+                                            <h3>Our Cyber Security Services</h3>
+                                            <div class="sub-menu__inner">
+                                                <div class="column">
+                                                    <ul>
+                                                        <li><span class="icon-clipboard"></span><span
+                                                                class="link-text">Cyber
+                                                                Security
+                                                                Assessment</span></li>
+                                                        <li><span class="icon-school"></span><span
+                                                                class="link-text">Cyber
+                                                                Essentials
+                                                                Certification</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="column">
+                                                    <ul>
+                                                        <li><span class="icon-clock-o"></span><span
+                                                                class="link-text">Cyber
+                                                                Security
+                                                                Management</span></li>
+                                                        <li><span class="icon-security"></span><span
+                                                                class="link-text">PCI
+                                                                Compliance</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="column">
+                                                    <ul>
+                                                        <li><span class="icon-lab"></span><span class="link-text">Cyber
+                                                                Penetration
+                                                                Testing</span></li>
+                                                        <li><span class="icon-lock"></span><span
+                                                                class="link-text">Hacking
+                                                                Prevention</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="main-nav__element--developer">
+                                    <a href="#">
+                                        <div class="main-nav__item">
+                                            <span class="icon-school"></span>
+                                            <h4>
+                                                <small>Developer</small> <br>Course
+                                            </h4>
+                                        </div>
+                                    </a>
+                                    <div class="main-nav__sub-menu__container">
+
+                                        <div class="main-nav__sub-menu container">
+                                            <h3>Our Developer Course Services</h3>
+                                            <div class="sub-menu__inner">
+                                                <div class="column">
+                                                    <ul>
+                                                        <li><span class="icon-display"></span><span
+                                                                class="link-text">Train
+                                                                For A
+                                                                Career
+                                                                In Tech</span></li>
+                                                        <li><span class="icon-handshake-o"></span><span
+                                                                class="link-text">Scion
+                                                                Collaborators</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="column">
+                                                    <ul>
+                                                        <li><span class="icon-embed2"></span><span
+                                                                class="link-text">Skills
+                                                                Bootcamp</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="column">
+                                                    <ul>
+                                                        <li><span class="icon-help"></span><span class="link-text">Scion
+                                                                Scheme
+                                                                Frequently Asked Questions</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </header>
                 </div>
-                <div class="ml-3">
-                    <div class="text-base/5 font-medium text-white">Tom Cook</div>
-                    <div class="text-sm font-medium text-gray-400">tom@example.com</div>
-                </div>
-                <button type="button" class="relative ml-auto shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden">
-                    <span class="absolute -inset-1.5"></span>
-                    <span class="sr-only">View notifications</span>
-                    <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
-                    </svg>
-                </button>
             </div>
-            <div class="mt-3 space-y-1 px-2">
-                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Your Profile</a>
-                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Settings</a>
-                <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Sign out</a>
-            </div>
-        </div>
-    </div>
-</nav>
