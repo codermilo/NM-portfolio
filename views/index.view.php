@@ -375,7 +375,7 @@
     </div>
 
     <!-- Wrapper to contain main content (So I can move it on side menu reveal)-->
-    <div id="main-content"></div>
+    <div id="main-content">
 
 
     <?php require base_path('views/partials/nav.php');
