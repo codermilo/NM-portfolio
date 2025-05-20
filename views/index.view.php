@@ -17,36 +17,43 @@
         <?php require base_path('views/partials/nav.php');
         ?>
 
+        <main class="">
 
-        <!-- Banner Section -->
-        <?php require base_path('views/home/banner.php');
-        ?>
+            <!-- Sticky Navbar -->
+            <?php require base_path('views/partials/stickyNav.php');
+            ?>
 
-        <!-- Service Section -->
-        <?php require base_path('views/home/services.php');
-        ?>
 
-        <!-- Partners Slideshow Section -->
-        <?php require base_path('views/home/partners.php');
-        ?>
+            <!-- Banner Section -->
+            <?php require base_path('views/home/banner.php');
+            ?>
 
-        <!-- Welcome Section -->
-        <?php require base_path('views/home/welcome.php');
-        ?>
+            <!-- Service Section -->
+            <?php require base_path('views/home/services.php');
+            ?>
 
-        <!-- Latest Articles Section -->
-        <?php require base_path('views/home/articles.php');
-        ?>
+            <!-- Partners Slideshow Section -->
+            <?php require base_path('views/home/partners.php');
+            ?>
 
-        <!-- Clients Slideshow Section -->
-        <?php require base_path('views/home/clients.php');
-        ?>
+            <!-- Welcome Section -->
+            <?php require base_path('views/home/welcome.php');
+            ?>
+
+            <!-- Latest Articles Section -->
+            <?php require base_path('views/home/articles.php');
+            ?>
+
+            <!-- Clients Slideshow Section -->
+            <?php require base_path('views/home/clients.php');
+            ?>
 
         </main>
 
         <!-- Footer -->
         <?php require base_path('views/partials/footer.php');
         ?>
+
     </div>
 
     <!-- Cookie Consent  -->
