@@ -35,7 +35,6 @@ function authorize($condition, $status = Response::FORBIDDEN)
 function base_path($path = '')
 {
 
-    // dd(BASE_PATH . ltrim($path, '/\\'));
     return BASE_PATH . ltrim($path, '/\\');
 }
 
