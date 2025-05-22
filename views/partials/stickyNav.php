@@ -19,7 +19,7 @@
                             <button class="btn--it support"><span class="icon-mouse"></span>Support</button>
 
                             <button class="contact-btn"><span
-                                    class="icon-paperplane"></span>Contact</button>
+                                    class="icon-paperplane"></span><a href="/contact">Contact</a></button>
 
                             <!-- Tablet Search Bar -->
                             <div class="tablet-search-bar mobile-hidden">

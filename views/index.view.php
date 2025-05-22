@@ -64,6 +64,7 @@
     <?php require base_path('views/partials/chatWidget.php');
     ?>
 
+    <!-- Consent Tag -->
     <?php require base_path('views/partials/consentTag.php');
     ?>
 

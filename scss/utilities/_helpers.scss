@@ -59,6 +59,10 @@
     padding-right: 15px;
 }
 
+.negative-m {
+    margin-inline: -15px;
+}
+
 .space-between {
     justify-content: space-between;
 }
@@ -104,6 +108,7 @@
 
 .hidden-sm {
     display: none;
+
     // hidden at smaller screen sizes
     @media (min-width: 991px) {
         display: block;
@@ -111,6 +116,7 @@
 }
 
 .visible-sm {
+
     // visible at smaller screen sizes
     @media (min-width: 991px) {
         display: none;
