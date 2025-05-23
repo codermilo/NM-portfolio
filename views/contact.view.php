@@ -110,10 +110,10 @@
                                     class="">Company Name</label>
 
                                 <div class="">
-                                    <input type="text" id="company" name="company" value="<?= $_POST['company'] ?? '' ?>">
+                                    <input type="text" id="company" name="companyName" value="<?= $_POST['companyName'] ?? '' ?>">
 
-                                    <?php if (isset($errors['company'])) : ?>
-                                        <p class=""><?= $errors['company'] ?></p>
+                                    <?php if (isset($errors['companyName'])) : ?>
+                                        <p class=""><?= $errors['companyName'] ?></p>
                                     <?php endif; ?>
                                 </div>
                             </div>

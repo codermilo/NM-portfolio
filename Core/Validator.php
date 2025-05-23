@@ -15,4 +15,10 @@ class Validator
     {
         return filter_var($value, FILTER_VALIDATE_EMAIL);
     }
+
+    public static function phone($value)
+    {
+        // validate phone number format
+        return preg_match('/^(?:(?:\+44\s?|0)(?:1|2|3|7)(?:\d\s?){8,9})$/', $value);
+    }
 }
