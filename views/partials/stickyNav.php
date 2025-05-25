@@ -6,12 +6,12 @@
                     <div class="full-width">
                         <div class="row expanded">
                             <div class="header-logo">
-                                <a href="#">
+                                <a href="/">
                                     <img src="img/f-logo.webp" alt="Netmatters logo">
                                 </a>
                             </div>
                             <div class="phone-link mobile-visible">
-                                <a href="#">
+                                <a href="/">
                                     <span class="icon-phone_in_talk"></span>
                                 </a>
                             </div>

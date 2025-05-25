@@ -1,5 +1,10 @@
 <?php
 
+use Core\Session;
+
 view("contact.view.php", [
-    'bannerHeading' => 'Contact Us',
+    'errors' => Session::get('errors'),
+    'success' => Session::get(key: 'success') ?? null
 ]);
+
+// dd(Session::get('errors'));

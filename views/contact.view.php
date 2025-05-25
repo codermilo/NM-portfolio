@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php require base_path('views/partials/head.php');
+<?php
+
+require base_path('views/partials/head.php');
 ?>
 
 <body>
@@ -88,7 +90,33 @@
 
             <div class="contact-section padding">
                 <div class="contact-form">
-                    <form method="POST" action="/enquiries">
+                    <form id="contact-form" method="POST" action="/enquiries">
+                        <!-- Error messages -->
+                        <div class="message-area">
+                            <!-- success message -->
+                            <?php if (!empty($success) && isset($success['message'])): ?>
+                                <div class="success">
+                                    <?= htmlspecialchars($success['message']) ?>
+                                    <button type="button" class="alert-close" aria-label="Close">×</button>
+                                </div>
+                            <?php endif; ?>
+
+                            <?php if (isset($errors['name'])) : ?>
+                                <div class="error"><?= $errors['name'] ?> <button type="button" class="alert-close" aria-label="Close">×</button></div>
+                            <?php endif; ?>
+                            <?php if (isset($errors['companyName'])) : ?>
+                                <div class="error"><?= $errors['companyName'] ?> <button type="button" class="alert-close" aria-label="Close">×</button></div>
+                            <?php endif; ?>
+                            <?php if (isset($errors['email'])) : ?>
+                                <div class="error"><?= $errors['email'] ?> <button type="button" class="alert-close" aria-label="Close">×</button></div>
+                            <?php endif; ?>
+                            <?php if (isset($errors['phone'])) : ?>
+                                <div class="error"><?= $errors['phone'] ?> <button type="button" class="alert-close" aria-label="Close">×</button></div>
+                            <?php endif; ?>
+                            <?php if (isset($errors['message'])) : ?>
+                                <div class="error"><?= $errors['message'] ?> <button type="button" class="alert-close" aria-label="Close">×</button></div>
+                            <?php endif; ?>
+                        </div>
                         <div class="form-group">
                             <div>
                                 <label
@@ -96,11 +124,7 @@
                                     class="">Your Name</label>
 
                                 <div class="">
-                                    <input type="text" id="name" name="name" value="<?= $_POST['name'] ?? '' ?>">
-
-                                    <?php if (isset($errors['name'])) : ?>
-                                        <p class=""><?= $errors['name'] ?></p>
-                                    <?php endif; ?>
+                                    <input type="text" id="name" name="name" value="<?= old('name') ?>">
                                 </div>
                             </div>
 
@@ -110,11 +134,7 @@
                                     class="">Company Name</label>
 
                                 <div class="">
-                                    <input type="text" id="company" name="companyName" value="<?= $_POST['companyName'] ?? '' ?>">
-
-                                    <?php if (isset($errors['companyName'])) : ?>
-                                        <p class=""><?= $errors['companyName'] ?></p>
-                                    <?php endif; ?>
+                                    <input type="text" id="company" name="companyName" value="<?= old(key: 'companyName') ?>">
                                 </div>
                             </div>
                         </div>
@@ -126,11 +146,7 @@
                                     class="">Your Email</label>
 
                                 <div class="">
-                                    <input type="text" id="email" name="email" value="<?= $_POST['email'] ?? '' ?>">
-
-                                    <?php if (isset($errors['email'])) : ?>
-                                        <p class=""><?= $errors['email'] ?></p>
-                                    <?php endif; ?>
+                                    <input type="text" id="email" name="email" value="<?= old(key: 'email') ?>">
                                 </div>
                             </div>
 
@@ -140,11 +156,7 @@
                                     class="">Your Telephone Number</label>
 
                                 <div class="">
-                                    <input type="text" id="phone" name="phone" value="<?= $_POST['phone'] ?? '' ?>">
-
-                                    <?php if (isset($errors['phone'])) : ?>
-                                        <p class=""><?= $errors['phone'] ?></p>
-                                    <?php endif; ?>
+                                    <input type="text" id="phone" name="phone" value="<?= old(key: 'phone') ?>">
                                 </div>
                             </div>
                         </div>
@@ -160,11 +172,7 @@
                                     id="message"
                                     name="message"
                                     rows="3"
-                                    class=""><?= $_POST['message'] ?? '' ?></textarea>
-
-                                <?php if (isset($errors['message'])) : ?>
-                                    <p class=""><?= $errors['message'] ?></p>
-                                <?php endif; ?>
+                                    class=""><?= old('message') ?></textarea>
                             </div>
 
                         </div>
@@ -242,6 +250,7 @@
 
     <script src="/js/jquery-3.7.1.min.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/formValidator.js"></script>
 </body>
 
 </html>
