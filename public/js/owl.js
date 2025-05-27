@@ -11,4 +11,30 @@ $(document).ready(function () {
         dotsEach: true,
         nav: true
     });
+
+    $('.partners').owlCarousel({
+        loop: true,
+        autoHeight: true,
+        autoWidth: true,
+        items: 8,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: !0,
+        dots: false,
+        dotsEach: false,
+        nav: false
+    })
+
+    $('.clients').owlCarousel({
+        loop: true,
+        autoHeight: true,
+        autoWidth: true,
+        items: 5,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: !0,
+        dots: false,
+        dotsEach: false,
+        nav: false
+    })
 });
