@@ -97,24 +97,24 @@ require base_path('views/partials/head.php');
                             <?php if (!empty($success) && isset($success['message'])): ?>
                                 <div class="success">
                                     <?= htmlspecialchars($success['message']) ?>
-                                    <button type="button" class="alert-close" aria-label="Close">×</button>
+                                    <button type="button" class="alert-close" aria-label="Close">&#x00D7;</button>
                                 </div>
                             <?php endif; ?>
 
                             <?php if (isset($errors['name'])) : ?>
-                                <div class="error"><?= $errors['name'] ?> <button type="button" class="alert-close" aria-label="Close">×</button></div>
+                                <div class="error"><?= $errors['name'] ?> <button type="button" class="alert-close" aria-label="Close">&#x00D7;</button></div>
                             <?php endif; ?>
                             <?php if (isset($errors['companyName'])) : ?>
-                                <div class="error"><?= $errors['companyName'] ?> <button type="button" class="alert-close" aria-label="Close">×</button></div>
+                                <div class="error"><?= $errors['companyName'] ?> <button type="button" class="alert-close" aria-label="Close">&#x00D7;</button></div>
                             <?php endif; ?>
                             <?php if (isset($errors['email'])) : ?>
-                                <div class="error"><?= $errors['email'] ?> <button type="button" class="alert-close" aria-label="Close">×</button></div>
+                                <div class="error"><?= $errors['email'] ?> <button type="button" class="alert-close" aria-label="Close">&#x00D7;</button></div>
                             <?php endif; ?>
                             <?php if (isset($errors['phone'])) : ?>
-                                <div class="error"><?= $errors['phone'] ?> <button type="button" class="alert-close" aria-label="Close">×</button></div>
+                                <div class="error"><?= $errors['phone'] ?> <button type="button" class="alert-close" aria-label="Close">&#x00D7;</button></div>
                             <?php endif; ?>
                             <?php if (isset($errors['message'])) : ?>
-                                <div class="error"><?= $errors['message'] ?> <button type="button" class="alert-close" aria-label="Close">×</button></div>
+                                <div class="error"><?= $errors['message'] ?> <button type="button" class="alert-close" aria-label="Close">&#x00D7;</button></div>
                             <?php endif; ?>
                         </div>
                         <div class="form-group">
@@ -212,12 +212,27 @@ require base_path('views/partials/head.php');
                 <div class="contact-details">
                     <h4>Email us on:</h4>
                     <h2>sales@netmatters.com</h2>
+                    <h4>Speak to Sales on:</h4>
+                    <h2>01603 515007</h2>
                     <h4>Business hours:</h4>
                     <h4>Monday - Friday 07:00 - 18:00</h4>
                     <div class="accordion">
                         <div class="accordion-title">
                             <h4>Out of Hours IT Support</h4>
                         </div>
+                        <div class="accordion-panel">
+                            <h2 id="panel1-title">
+                                <button class="accordion-trigger" aria-expanded="true" aria-controls="accordion1-content">
+                                    Grid is awesome
+                                </button>
+                            </h2>
+                            <div class="accordion-content" role="region" aria-labelledby="panel1-title" aria-hidden="false" id="panel1-content">
+                                <div>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, amet!</p>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="dropdown">
                             <p>Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
                             <p>
@@ -251,6 +266,7 @@ require base_path('views/partials/head.php');
     <script src="/js/jquery-3.7.1.min.js"></script>
     <script src="/js/main.js"></script>
     <script src="/js/formValidator.js"></script>
+    <script src="/js/accordion.js"></script>
 </body>
 
 </html>

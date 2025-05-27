@@ -2524,5 +2524,16 @@ img {
   overflow: hidden;
   display: none;
 }
+.contact-details .accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms;
+}
+.contact-details .accordion-content[aria-hidden=false] {
+  grid-template-rows: 1fr;
+}
+.contact-details .accordion-content > div {
+  overflow: hidden;
+}
 
 /*# sourceMappingURL=style.css.map */
