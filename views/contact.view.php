@@ -217,33 +217,26 @@ require base_path('views/partials/head.php');
                     <h4>Business hours:</h4>
                     <h4>Monday - Friday 07:00 - 18:00</h4>
                     <div class="accordion">
-                        <div class="accordion-title">
-                            <h4>Out of Hours IT Support</h4>
-                        </div>
                         <div class="accordion-panel">
-                            <h2 id="panel1-title">
-                                <button class="accordion-trigger" aria-expanded="true" aria-controls="accordion1-content">
-                                    Grid is awesome
+                            <h4 id="panel1-title">
+                                <button class="accordion-trigger" aria-expanded="false" aria-controls="accordion1-content">
+                                    Out of Hours IT Support
                                 </button>
-                            </h2>
-                            <div class="accordion-content" role="region" aria-labelledby="panel1-title" aria-hidden="false" id="panel1-content">
+                            </h4>
+                            <div class="accordion-content" role="region" aria-labelledby="panel1-title" aria-hidden="true" id="panel1-content">
                                 <div>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, amet!</p>
+                                    <p>Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
+                                    <p>
+                                        <strong> Monday - Friday 18:00 - 22:00 <br>
+                                            Saturday 08:00 - 16:00 <br>
+                                            Sunday 10:00 - 18:00
+                                        </strong>
+                                    </p>
+                                    <p>
+                                        To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours voicemail. A technician will contact you on the number provided within 45 minutes of your call.
+                                    </p>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="dropdown">
-                            <p>Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
-                            <p>
-                                <strong> Monday - Friday 18:00 - 22:00 <br>
-                                    Saturday 08:00 - 16:00 <br>
-                                    Sunday 10:00 - 18:00
-                                </strong>
-                            </p>
-                            <p>
-                                To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours voicemail. A technician will contact you on the number provided within 45 minutes of your call.
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -257,6 +250,10 @@ require base_path('views/partials/head.php');
 
     <!-- Cookie Consent  -->
     <?php require base_path('views/partials/cookieModal.php');
+    ?>
+
+    <!-- Fixed Widgets -->
+    <?php require base_path('views/partials/chatWidget.php');
     ?>
 
     <!-- Consent Tag -->

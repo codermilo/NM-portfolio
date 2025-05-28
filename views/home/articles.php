@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="articles-list expanded">
-            <div class="article-container">
+            <!-- <div class="article-container">
                 <div class="article">
                     <div class="article-img">
                         <img src="https://www.netmatters.co.uk/assets/images/thumbnails/thumb/case-study-website-gFeC.webp"
@@ -102,7 +102,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
+
+            <?php require base_path('views/home/articleCard.php');
+            ?>
+
             <div class="view-all-articles mobile-visible">
                 <a href="#">
                     <h3 class="link">View All <span class="icon-arrow-right2"></span></h3>

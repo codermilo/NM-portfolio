@@ -2513,21 +2513,33 @@ img {
 .contact-details h2 {
   color: #926fb1;
 }
-.contact-details .accordion-title h4 {
-  margin: 0;
+.contact-details .accordion {
+  letter-spacing: 0.4px;
 }
-.contact-details .accordion-title:hover {
+.contact-details .accordion p {
+  font-weight: 400;
+  color: #666;
+  margin: 0 0 10px;
+  line-height: 1.875rem;
+  margin-bottom: 25px;
+}
+.contact-details .accordion-trigger {
+  font-weight: 600;
+  border: none;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+.contact-details .accordion-trigger:hover {
   text-decoration: underline;
   cursor: pointer;
-}
-.contact-details .accordion .dropdown {
-  overflow: hidden;
-  display: none;
 }
 .contact-details .accordion-content {
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 500ms;
+  padding-bottom: 4rem;
 }
 .contact-details .accordion-content[aria-hidden=false] {
   grid-template-rows: 1fr;
