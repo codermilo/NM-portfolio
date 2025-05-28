@@ -1,5 +1,10 @@
 <?php
 
+require_once __DIR__ . '/../vendor/autoload.php';
+
+// Load .env file from the project root
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->load();
 
 return [
     'database' => [
