@@ -11,7 +11,6 @@
         </div>
         <div class="articles-list expanded">
             
-        Import 
             <?php require base_path('views/home/articleCard.php');
             ?>
 

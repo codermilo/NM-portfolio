@@ -5,7 +5,7 @@ use Core\Database;
 
 $db = App::resolve(Database::class);
 
-$articles = $db->query('select * from newsArticles')->get();
+$articles = $db->query('select * from newsarticles')->get();
 
 
 view("index.view.php", [
