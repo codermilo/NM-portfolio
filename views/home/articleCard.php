@@ -5,7 +5,7 @@
                 <img src="<?= $article['imgURL'] ?>"
                     alt="">
             </div>
-            <div class="tag"><?= $article['tag'] ?></div>
+            <div class="tag <?= $article['tag'] ?>"><?= $article['tag'] ?></div>
             <div class="text-content">
                 <h3>
                     <?= $article['heading'] ?>
@@ -16,7 +16,7 @@
                 </a>
                 <div class="user">
                     <span class="avatar">
-                        <img src="<?= $article['authorImg'] ?>"
+                        <img src="<?= $article['authorImgURL'] ?>"
                             class="" alt="Netmatters ">
                     </span>
                     <div class="details">
