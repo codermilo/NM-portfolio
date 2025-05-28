@@ -1,28 +1,36 @@
 .slideshow__container {
-    width: 100vw;
+    // width: 100vw;
     margin-bottom: 3rem;
     margin-top: 3rem;
-    display: flex;
+    // display: flex;
 
     .slideshow {
-        position: relative;
-        display: flex;
-        animation: slide 60s infinite;
-        height: 70px;
+        // position: relative;
+        // display: flex;
+        // animation: slide 60s infinite;
+        // height: 70px;
+
+        .owl-stage {
+            display: flex;
+            align-items: center;
+            // gap: 2rem;
+            padding: 0 2rem;
+        }
 
         &__item {
-            width: auto;
+            width: fit-content;
             height: auto;
-            max-height: 70px;
+            // max-height: 70px;
             display: flex;
             justify-content: center;
+            
             margin-right: 5rem;
-            flex-shrink: 0;
+            // flex-shrink: 0;
             cursor: pointer;
             position: relative;
 
             picture {
-                height: 70px;
+                // height: 70px;
                 object-position: center;
                 display: flex;
                 align-items: center;
@@ -111,7 +119,7 @@
 }
 
 .partners {
-    width: 6901px;
+    // width: 6901px;
 
     img {
         filter: grayscale(1);
@@ -125,7 +133,7 @@
 }
 
 .clients {
-    width: 16562px;
+    // width: 16562px;
 
     img {
         filter: grayscale(1);

@@ -1,0 +1,20 @@
+.breadcrumb-container {
+    box-shadow: 0 3px 35px rgba(0, 0, 0, .1);
+    color: #333645 !important;
+
+    ul {
+        display: flex;
+        padding: 1rem 0;
+        padding-left: 1rem !important;
+
+        .link::before {
+            content: "/\A0";
+            padding: 0 5px;
+            color: #333645;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
